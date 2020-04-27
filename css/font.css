@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'KBcard Display';
+    src: url('KBcardDisplay-Light.eot');
+    src: local('KBcard Display Light'), local('KBcardDisplay-Light'),
+        url('KBcardDisplay-Light.eot?#iefix') format('embedded-opentype'),
+        url('KBcardDisplay-Light.woff2') format('woff2'),
+        url('KBcardDisplay-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'KBcard Display';
+    src: url('KBcardDisplay-Medium.eot');
+    src: local('KBcard Display Medium'), local('KBcardDisplay-Medium'),
+        url('KBcardDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+        url('KBcardDisplay-Medium.woff2') format('woff2'),
+        url('KBcardDisplay-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KBcard Display';
+    src: url('KBcardDisplay-Bold.eot');
+    src: local('KBcard Display Bold'), local('KBcardDisplay-Bold'),
+        url('KBcardDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('KBcardDisplay-Bold.woff2') format('woff2'),
+        url('KBcardDisplay-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}

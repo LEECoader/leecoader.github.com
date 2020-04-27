@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+*,*:before,*:after{box-sizing:border-box;}
+body{background:#E56262;}
+
+.wrap{text-align:center;}
+
+.menu{position:relative;display:inline-block;margin:200px auto;}
+.menu > button{width:50px;height:50px;text-indent:-9999px;background:#fff url(../img/icon_plus.png) no-repeat center center;background-size:24px 24px;border:1px solid #000;border-radius:50%;outline:none;transition:0.5s;}
+.menu .list{position:absolute;bottom:60px;left:0;display:none;}
+
+.graph{margin:0 auto;width:500px;height:300px;}
+.graph .list{height:100%;overflow:hidden;}
+.graph .list li{width:calc(33.33% - 20px);height:0;text-align:center;text-indent:-9999px;float:left;transition:1s;}
+.graph .list li:first-child{background:red;}
+.graph .list li:nth-child(2){background:yellow;}
+.graph .list li:nth-child(3){background:green;}
+.graph .list li + li{margin-left:30px;}
+
+.loader{position:fixed;top:0;right:0;bottom:0;left:0;width:100%;height:100%;background:#E56262;/* opacity:0.2; */}
+.loader .dot-list{position:absolute;top:calc(50% - 50px);left:calc(50% - 50px);width:100px;height:100px;}
+.loader .dot-list li{position:absolute;top:0;left:0;width:100%;height:100%;background:#fff;border-radius:50%;animation-fill-mode:both;}
+.loader .dot-list li:first-child{animation:dot1 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;z-index:1;}
+.loader .dot-list li:nth-child(2){top:12.5%;left:12.5%;width:75%;height:75%;animation:dot2 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;z-index:2;}
+.loader .dot-list li:last-child{top:25%;left:25%;width:50%;height:50%;animation:dot3 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;z-index:3;}
+
+@keyframes dot1{
+    0%, 10%{box-shadow:2px 2px 3px 2px rgba(0, 0, 0, 0.2);-webkit-transform:scale(0);transform:scale(0);}
+    100%{box-shadow:10px 10px 15px 0 rgba(0, 0, 0, 0.3);-webkit-transform:scale(1);transform:scale(1);}
+}
+
+@keyframes dot2{
+    0%, 40%{box-shadow:2px 2px 3px 2px rgba(0, 0, 0, 0.2);-webkit-transform:scale(0);transform:scale(0);}
+    100%{box-shadow:10px 10px 15px 0 rgba(0, 0, 0, 0.3);-webkit-transform:scale(1);transform:scale(1);}
+}
+
+@keyframes dot3{
+    0%, 70%{box-shadow:2px 2px 3px 2px rgba(0, 0, 0, 0.2);-webkit-transform:scale(0);transform:scale(0);}
+    100%{box-shadow:10px 10px 15px 0 rgba(0, 0, 0, 0.3);-webkit-transform:scale(1);transform:scale(1);}
+}
+
