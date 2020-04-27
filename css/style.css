@@ -21,6 +21,6 @@ body{height:100%;}
 /* footer */
 .footer{position:absolute;bottom:20px;left:0;padding:0 20px;width:100%;text-align:center;}
 .footer .txt{position:relative;display:inline-block;color:#000;}
-.footer .txt:before{position:absolute;top:0;left:0;content:attr(data-split);width:50%;color:#fff;overflow:hidden;}
+.footer .txt:before{position:absolute;top:0;left:0;content:attr(data-split);width:50%;color:#fff;white-space:nowrap;overflow:hidden;}
 
 
