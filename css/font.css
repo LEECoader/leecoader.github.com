@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: "NotoSansKR";
     src: url("../asset/font/NotoSansKR-Thin.eot?#iefix") format("embedded-opentype"),
@@ -28,8 +29,9 @@
 @font-face {
     font-family: "NotoSansKR";
     src: url("../asset/font/NotoSansKR-Regular.eot?#iefix") format("embedded-opentype"),
-         url("../asset/font/NotoSansKR-Regular.woff2") format("woff2"),
-         url("../asset/font/NotoSansKR-Regular.woff") format("woff");
+         url("../asset/font/NotoSansKR-Regular.woff") format("woff"),
+         url("../asset/font/NotoSansKR-Regular.woff2") format("woff2");
+
     font-style: normal;
     font-weight: 400;
 }
