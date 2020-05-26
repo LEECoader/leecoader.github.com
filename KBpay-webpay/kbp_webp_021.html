@@ -1,0 +1,64 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-05-22          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>결제비밀번호 등록</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/jquery-2.2.4.min.js"></script>
+        <script src="./js/ui.js"></script>
+        <script src="util/placeholder.js"></script>
+    </head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>결제비밀번호 입력</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+        <div class="container">
+            <div class="contents-wrap">
+                <!--contents-->
+                <div class="contents kbp_webp_021"> <!-- contents + 페이지별 class 삽입 -->
+                    <p class="txt02 align-c">결제비밀번호 입력</p>
+                    
+                    <div class="passWrap card-pass">
+                        <!--비밀번호 실제 입력 칸-->
+                        <div class="pass-input pass">
+                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
+                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
+                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
+                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
+                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
+                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
+                        </div>
+                        <!--//비밀번호 실제 입력 칸-->
+                        <div class="pass-bg">
+                            <input class="certi-input" type="password" value="1">
+                            <input class="certi-input" type="password" value="1">
+                            <input class="certi-input" type="password" value="1">
+                            <input class="certi-input" type="password" value="1">
+                            <input class="certi-input" type="password" value="1">
+                            <input class="certi-input" type="password" value="1">
+                        </div>
+
+                        <!--error text-->
+                        <em class="error-txt certi" >결제비밀번호가 일치하지 않습니다.</em> <!--케이스별 에러문구-->
+                        <!--//error text--> 
+                    </div>
+                    
+                </div>
+                <!--//contents-->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

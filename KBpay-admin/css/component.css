@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+/* Accordion menu */
+
+
+
+/* Agree */
+
+
+/* Board */
+.board-write table td {border-bottom: 1px solid #ddd;}
+.board-write table td.lb {font-weight: 700;}
+.board-write table td.f-txt-only {padding: 1px 0;}
+
+.board-view table td {border-bottom: 1px solid #ddd;}
+
+.board-list {border-top: 1px solid #000;}
+.board-list table td {border-bottom: 1px solid #ddd;}
+
+
+/* Button */
+.btn-type {display: inline-block;}
+
+
+/* Form */
+select {-webkit-appearance: none; -moz-appearance: none; appearance: none;}
+select::-ms-expand {display: none;}
+
+.f-ipt-txt.delete {position: relative;}
+.f-ipt-txt .ico-del {display: none; position: absolute; right: 0; top: 0;}
+
+.f-ipt-select {position: relative;}
+.f-ipt-select::after {content: "▼"; display: block; position: absolute; right: 0; top: 0;}
+.f-ipt-select input {width: 100%;}
+
+.f-chk {position: relative;}
+.f-chk::before {content: ""; display: inline-block; width: 15px; height: 15px; border: 1px solid #ddd;}
+.f-chk.checked::before {content: "v";}
+.f-chk.disabled::before {background: #eee;}
+.f-chk input {position: absolute; left: -9999px; top: -9999px;}
+
+.f-rdo::before {content: ""; display: inline-block; width: 15px; height: 15px; border: 1px solid #ddd; border-radius: 50%;}
+.f-rdo.checked::before {content: "●";}
+.f-rdo.diabled::before {background: #eee;}
+.f-rdo input {position: absolute; left: -9999px; top: -9999px;}
+
+.f-switch {display: inline-block; min-width: 50px; height: 20px; padding-right: 16px; border: 1px solid #ddd; border-radius: 10px; font-size: 12px;}
+.f-switch span {display: block; position: relative; height: 100%; text-align: right;}
+.f-switch span::after {content: ""; display: block; position: absolute; left: 1px; top: 0; width: 18px; height: 18px; border-radius: 50%; background: #999; transition: .2s;}
+.f-switch span::before {content: "OFF"; display: inline; position: relative; right: -16px;}
+.f-switch input {position: absolute; left: -9999px;}
+.f-switch input:checked + span {text-align: left;}
+.f-switch input:checked + span::after {left: 100%; background: blue;}
+.f-switch input:checked + span::before {content: "ON"; right: auto;}
+
+.f-group {display: table; width: 100%;}
+.f-group > * {display: table-cell; width: 50%;}
+.f-group.type01 dt {width: 80px; font-size: 13px;}
+.f-group.type01 dd {width: auto;}
+.ipt-group {display: flex;}
+.ipt-group > * {flex-grow: 1;}
+.ipt-group input[type=text] {width: 100%;}
+
+.f-in-bar {flex-grow: 0; width: 20px !important; text-align: center !important;}/* 하이푼 */
+.f-in-txt {}
+.ssn-first {flex-grow: 0; width: 20px !important;}/* 주민번호 뒷자리중 첫번째 */
+.ssn-hidden {flex-grow: 0; width: 100px !important;}/* 주민번호 뒷자리 hidden */
+.ipt-group .community-cpn {flex-grow: 0; width: 80px !important;}/* 통신사 */
+
+
+/* Guide text */
+.guide-txt-list li {position: relative; padding-left: 7px;}
+.guide-txt-list li::before {content: ""; display: block; position: absolute; left: 0; top: 10px; width: 3px; height: 1px; background: #666;}
+
+
+/* Icon */
+.ico {display: inline-block;}
+
+
+/* Info */
+.info.type01 strong {text-decoration: underline;}
+
+
+/* Layer popup */
+.l-pop {position: static;}
+
+.l-header {background: #f5f5f5;}
+
+.l-footer .btn-group {display: flex;}
+.l-footer .btn-group > * {flex-grow: 1; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.l-footer .btn-group.half > * {width: 50%;}
+.l-footer .btn-group .btn.blue {color: #fff; background: #0078d7;}
+
+.l-dim {display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: #000; opacity: .4; z-index: 10;}
+
+.l-bottom {position: absolute; left: 0; bottom: -100px; width: 100%; height: 100px; background: #fff; z-index: 10;}
+
+
+/* Tab */
+.tab-list.type01 {border-bottom: 1px solid #ddd;}
+.tab-list.type01::after {content: ""; display: block; clear: both;}
+.tab-list.type01 li {float: left; padding: 5px 0;}
+.tab-list.type01 li a {display: block; padding: 0 10px; color: #000;}
+.tab-list.type01 li a.active {font-weight: 700;}
+
+.tab-contents .tab-item {display: none;}
+.tab-contents .tab-item:first-child {display: block;}
+
+
+ 

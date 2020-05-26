@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - KB Pay Admin Style Guide</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./guide.css">
+    <script src="../js/jquery-3.5.0.min.js"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div class="guide-wrap">
+        <header class="guide-header">
+            <h1>KB Pay Admin - HTML Guide</h1>
+            <ul class="guide-gnb">
+                <li><a href="index.html">기본규칙</a></li>
+                <li><a href="board.html">Board</a></li>
+                
+                <li><a href="button.html">Button</a></li>
+                <li><a href="etc.html">Etc</a></li>
+                <li><a class="active" href="form.html">Form</a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="layout.html">Layout</a></li>
+                <li><a href="list.html">List</a></li>
+                <li><a href="popup.html">Popup</a></li>
+                <li><a href="tab.html">Tab</a></li>
+            </ul>
+        </header>
+
+        <div class="guide-container">
+            <h2 class="guide-tit">Form elements</h2>
+
+            <h3 class="guide-tit02">input : text</h3>
+            <ul class="guide-list">
+                <li>
+
+                    <!-- 텍스트 일반 -->
+                    <span class="f-ipt-txt"><input type="text" value="" placeholder="text"></span>
+
+                </li>
+                <li>
+
+                    <!-- 삭제 버튼 있음 -->
+                    <span class="f-ipt-txt delete">
+                        <input type="text" value="" placeholder="text + delete button">
+                        <button class="ico ico-del" type="button">삭제</button>
+                    </span>
+
+                </li>
+                <li>
+
+                    <!-- 읽기전용 -->
+                    <span class="f-ipt-txt"><input type="text" value="" placeholder="readonly" readonly></span>
+
+                </li>
+                <li>
+
+                    <!-- 비활성화 -->
+                    <span class="f-ipt-txt"><input type="text" value="" placeholder="disabled" disabled></span>
+
+                </li>
+            </ul>
+
+            <h3 class="guide-tit02">input : search</h3>
+            <ul class="guide-list">
+                <li>
+
+                    <!-- 검색버튼필드 -->
+                    <span class="f-ipt-txt search">
+                        <input type="text" value="" placeholder="text + 조회">
+                        <button type="button">조회</button>
+                    </span>
+
+                </li>
+            </ul>
+
+            <h3 class="guide-tit02">input : checkbox</h3>
+            <ul class="guide-list">
+                <li>
+
+                    <!-- 체크박스 일반 -->
+                    <label for="" class="f-chk"><input type="checkbox" id=""></label>
+
+                </li>
+                <li>
+
+                    <!-- 체크박스 체크됨 -->
+                    <label for="" class="f-chk checked"><input type="checkbox" id="" checked>체크</label>
+
+                </li>
+                <li>
+
+                    <!-- 비활성화 -->
+                    <label for="" class="f-chk disabled"><input type="checkbox" id="" disabled>비활성화</label>
+
+                </li>
+                <li>
+
+                    <!-- 체크박스 그룹 -->
+                    <label for="" class="f-chk"><input type="checkbox" id="">체크1</label>
+                    <label for="" class="f-chk"><input type="checkbox" id="">체크2</label>
+
+                </li>
+            </ul>
+
+            <h3 class="guide-tit02">input : radio</h3>
+            <ul class="guide-list">
+                <li>
+
+                    <!-- 라디오버튼 일반 -->
+                    <label for="" class="f-rdo"><input type="radio" id=""></label>
+
+                </li>
+                <li>
+
+                    <!-- 라디오버튼 선택됨 -->
+                    <label for="" class="f-rdo checked"><input type="radio" id="" checked>선택</label>
+
+                </li>
+                <li>
+
+                    <!-- 비활성화 -->
+                    <label for="" class="f-rdo disabled"><input type="radio" id="" disabled>비활성화</label>
+
+                </li>
+                <li>
+
+                    <!-- 라디오버튼 그룹 -->
+                    <span class="rdoGroup">
+                        <label for="" class="f-rdo"><input type="radio" id="">선택1</label>
+                        <label for="" class="f-rdo"><input type="radio" id="">선택2</label>
+                    </span>
+
+                </li>
+            </ul>
+
+            <h3 class="guide-tit02">select</h3>
+            <ul class="guide-list">
+                <li>
+
+                    <!-- 셀렉트 -->
+                    <label for="" class="f-select">
+                        <select id="">
+                            <option value="">option 1</option>
+                            <option value="">option 2</option>
+                        </select>
+                    </label>
+
+                </li>
+            </ul>
+
+            <h3 class="guide-tit02">textarea</h3>
+            <ul class="guide-list">
+                <li>
+                    
+                    <!-- Textarea -->
+                    <textarea class="f-txtar" placeholder="내용을 입력해 주세요."></textarea>
+                    <div class="txtar-cnt"><span class="">0</span>/50</div>
+
+                </li>
+            </ul>
+
+            <h3 class="guide-tit02">switch</h3>
+            <ul class="guide-list">
+                <li>
+                    
+                    <!-- 스위치 -->
+                    <label class="f-switch" for="switch01">
+                        <input type="checkbox" id="switch01">
+                        <span></span>
+                    </label>
+
+                </li>
+            </ul>
+
+            <h3 class="guide-tit02">input group</h3>
+            <ul class="guide-list">
+                <li>
+
+                    <dl class="f-group type01">
+                        <dt>
+                            항목명
+                        </dt>
+                        <dd>
+                            <span class="f-ipt-txt delete">
+                                <input class="w-full" type="text" value="" placeholder="항목명을 입력해주세요.">
+                                <button class="ico ico-del" type="button">삭제</button>
+                            </span>
+                        </dd>
+                    </dl>
+                    <dl class="f-group type01">
+                        <dt>
+                            항목명
+                        </dt>
+                        <dd>
+                            <span class="f-ipt-select"><input type="text" value="" placeholder="항목"></span>
+                        </dd>
+                    </dl>
+                    <dl class="f-group type01">
+                        <dt>
+                            생년월일
+                        </dt>
+                        <dd>
+                            <span class="ipt-group">
+                                <span class="f-ipt-txt"><input type="text" value="" placeholder="6자리"></span>
+                                <span class="f-in-bar">-</span>
+                                <span class="f-ipt-txt ssn-first"><input type="text" value="" placeholder=""></span>
+                                <span class="ssn-hidden">●●●●●●</span>
+                            </span>
+                        </dd>
+                    </dl>
+                    <dl class="f-group type01">
+                        <dt>
+                            휴대폰번호
+                        </dt>
+                        <dd>
+                            <span class="ipt-group">
+                                <span class="f-ipt-select community-cpn"><input type="text" value="" placeholder="통신사선택"></span>
+                                <span class="f-in-bar">-</span>
+                                <span class="f-ipt-txt"><input type="text" value="" placeholder="'-'없이 번호입력''"></span>
+                                <button class="btn-type">인증요청</button>
+                            </span>
+                        </dd>
+                    </dl>
+                    <!-- Input group Multi line -->
+                    <dl class="f-group type01">
+                        <dt>
+                            휴대폰번호
+                        </dt>
+                        <dd>
+                            <span class="ipt-group">
+                                <span class="f-ipt-select community-cpn"><input type="text" value="LGU+" placeholder="통신사선택"></span>
+                                <span class="f-in-bar">-</span>
+                                <span class="f-ipt-txt"><input type="text" value="01012345678" placeholder="'-'없이 번호입력''"></span>
+                                <button class="btn-type">다시요청</button>
+                            </span>
+                            <span class="ipt-group">
+                                <span class="f-ipt-txt"><input type="text" value="123456" placeholder=""></span>
+                                <span class="f-in-txt">01:59</span>
+                            </span>
+                        </dd>
+                    </dl>
+
+                </li>
+            </ul>
+
+
+        </div>
+
+    </div>
+</body>
+</html>

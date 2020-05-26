@@ -1,0 +1,125 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-05-25          최초작성
+김수영             2020-05-25          case 추가
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>담당자승인요청</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+
+    <div class="wrap">
+
+        <header class="header">
+            <h1>기업공용카드 등록</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+
+        <div class="container">
+            <div class="contents-wrap">
+                
+                <div class="contents kbp_webp_032">
+                    
+                    <h2 class="tit">카드사용 <span class="underline">승인요청이 진행</span>됩니다</h2>
+
+                    <div class="form-wrap">
+                        <ul class="form-text-list">
+                            <li>
+                                <div class="form_text">
+                                    <span class="label">담당자명</span>
+                                    <span class="text-normal">김국민</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_text">
+                                    <span class="label">휴대폰번호</span>
+                                    <span class="text-normal">010 - 13 <em></em><em></em> - <em></em><em></em><em></em><em></em></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_text"> <!--인증요청 버튼 클릭시 노출--> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="name1">인증번호</label>
+                                    <input type="text" id="name1" class="text" value="" placeholder="숫자 4자리를 입력해주세요">
+                                    <em class="time">02:59</em>
+                                    <!--em class="certi_ok">인증완료</em-->
+                                    <button class="btn-delete" type="button">삭제</button>
+                                </div>
+                                <em class="error-txt">유효시간 초과</em>
+                            </li>
+                            <li style="display:none"> <!--인증완료 후-->
+                                <div class="form_text on out">
+                                    <label for="name2">인증번호</label>
+                                    <input type="text" id="name2" class="text gray" value="1234" placeholder="숫자 4자리를 입력해주세요">
+                                    <em class="certi_ok">인증완료</em>
+                                </div>
+                            </li>
+                            <li style="display:none"> <!--인증에러/유효시간 초과-->
+                                <div class="form_text on error">
+                                    <label for="name1">인증번호</label>
+                                    <input type="text" id="name1" class="text" value="" placeholder="숫자 4자리를 입력해주세요">
+                                    <em class="time">00:00</em>
+                                    <button class="btn-delete" type="button">삭제</button>
+                                </div>
+                                <em class="error-txt">유효시간 초과</em> <!--케이스에 따른 에러문구-->
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn medium yellow" type="button" ><span>인증요청</span></button> <!--default-->
+                    </div>
+                    <div class="btn-group" style="display:none">
+                        <button class="btn medium yellow" type="button" disabled ><span>인증</span></button> <!--인증번호에 포커스 시 노출 & 활성화 disabled 삭제-->
+                    </div>
+                    
+                    <p class="resend-tip">
+                        <button class="btnOpenBot" type="button" onclick="opBotSheet('layerBottom01')">사용승인 안내</button>
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="bottom-btn-area">
+                <div class="btn-group">
+                    <button class="btn large yellow" type="button" disabled="true"><span>등록</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bottom sheet layer -->
+    <div class="l-dim"></div>
+    <div class="l-bottom" id="layerBottom01">
+        <div class="l-bottom-wrap">
+            <div class="head">
+                <h1>카드사용 승인 안내</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div class="l-contents">
+                <!-- 컨텐츠영역 -->
+
+                    <ul class="list-ico num">
+                        <li class="li1"><span class="strong">카드 사용승인 담당자 정보를 확인해주세요.</span>담당자 이름과 휴대폰번호가 맞으면 [인증요청] 버튼을 탭하세요.</li>
+                        <li class="li2"><span class="strong">SMS 인증번호 확인 후 입력해주세요.</span>승인담당자에게 전송된 SMS 인증번호를 확인해주세요. 확인된 인증번호 입력 후 [인증]을 진행해주세요.<br>단, 인증은 SMS 인증번호 전송 후 3분 이내에 입력하셔야 합니다.</li>
+                        <li class="li3"><span class="strong">승인된 카드를 결제수단으로 등록해주세요.</span>인증번호 입력 후 인증이 완료되면 결제수단 등록이 가능합니다.<br>[등록]을 탭하면 카드가 결제수단으로 등록이 됩니다.</li>
+                    </ul>
+
+                <!-- //컨텐츠영역 -->
+            </div>
+        </div>
+    </div>
+    <!-- //bottom sheet layer -->
+
+</body>
+</html>

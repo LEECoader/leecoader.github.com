@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board - KB Pay Admin Style Guide</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./guide.css">
+    <script src="../js/jquery-3.5.0.min.js"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div class="guide-wrap">
+        <header class="guide-header">
+            <h1>KB Pay Admin - HTML Guide</h1>
+            <ul class="guide-gnb">
+                <li><a href="index.html">기본규칙</a></li>
+                <li><a class="active" href="board.html">Board</a></li>
+                
+                <li><a href="button.html">Button</a></li>
+                <li><a href="etc.html">Etc</a></li>
+                <li><a href="form.html">Form</a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="layout.html">Layout</a></li>
+                <li><a href="list.html">List</a></li>
+                <li><a href="popup.html">Popup</a></li>
+                <li><a href="tab.html">Tab</a></li>
+            </ul>
+        </header>
+
+        <div class="guide-container">
+            <h2 class="guide-tit">Board</h2>
+
+            <h3 class="guide-tit02">등록 / 수정 (C & U)</h3>
+            <ul class="guide-list">
+                <li>
+
+                    <!-- 등록 / 수정 -->
+                    <div class="board-write">
+                        <table>
+                            <colgroup>
+                                <col style="">
+                                <col style="">
+                            </colgroup>
+                            <tr>
+                                <td class="lb">text only</td>
+                                <td class="f-txt-only">
+                                    text
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="lb">text field</td>
+                                <td>
+                                    <span class="f-ipt-txt"><input type="text" value="" placeholder="text"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="lb">text field + delete</td>
+                                <td>
+                                    <span class="f-ipt-txt"><input type="text" value="" placeholder="text"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="lb">text field (readonly)</td>
+                                <td>
+                                    <span class="f-ipt-txt"><input type="text" value="" placeholder="readonly" readonly></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="lb">text field (disabled)</td>
+                                <td>
+                                    <span class="f-ipt-txt"><input type="text" value="" placeholder="disabled" disabled></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="lb">select</td>
+                                <td>
+                                    <label for="" class="f-select">
+                                        <select id="">
+                                            <option value="">option 1</option>
+                                            <option value="">option 2</option>
+                                        </select>
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="btn-group">
+                        <button class="" type="button">목록</button>
+                        <button class="" type="button">등록</button>
+                    </div>
+                    <!-- //등록 / 수정 -->
+
+                </li>
+            </ul>
+
+            <h3 class="guide-tit02">상세보기</h3>
+            <ul class="guide-list">
+                <li>
+
+                    <!-- 상세보기 -->
+                    <div class="board-view">
+                        <table>
+                            <colgroup>
+                                <col style="">
+                                <col style="">
+                            </colgroup>
+                            <tr>
+                                <td class="lb">Label</td>
+                                <td>
+                                    Info text
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- //상세보기 -->
+
+                </li>
+            </ul>
+
+            <h3 class="guide-tit02">목록</h3>
+            <ul class="guide-list">
+                <li>
+
+                    <!-- 목록 -->
+                    <!-- 검색조건 -->
+                    <div class="condition">
+                        <table>
+                            <colgroup>
+                                <col style="">
+                                <col style="">
+                            </colgroup>
+                            <tr>
+                                <td class="lb">Label</td>
+                                <td>
+                                    <span class="f-ipt-txt"><input type="text" value="" placeholder="text"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="lb">Label</td>
+                                <td>
+                                    <label for="" class="f-select">
+                                        <select id="">
+                                            <option value="">option 1</option>
+                                            <option value="">option 2</option>
+                                        </select>
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <button class="btn-condition-search">조회</button>
+                    </div>
+                    <!-- //검색조건 -->
+
+                    <!-- 검색결과목록 -->
+                    <div class="board-list">
+                        <table>
+                            <colgroup>
+                                <col style="">
+                                <col style="">
+                                <col style="">
+                                <col style="">
+                                <col style="">
+                            </colgroup>
+                            <tr class="head">
+                               <td>항목1</td>
+                               <td>항목2</td>
+                               <td>항목3</td>
+                               <td>항목4</td>
+                               <td>항목5</td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">조회된 내역이 없습니다.</td>
+                            </tr>
+                            <tr>
+                                <td>left</td>
+                                <td>left</td>
+                                <td>left</td>
+                                <td>left</td>
+                                <td>left</td>
+                            </tr>
+                            <tr>
+                                <td class="align-c">center</td>
+                                <td class="align-c">center</td>
+                                <td class="align-c">center</td>
+                                <td class="align-c">center</td>
+                                <td class="align-c">center</td>
+                            </tr>
+                            <tr>
+                                <td class="align-r">right</td>
+                                <td class="align-r">right</td>
+                                <td class="align-r">right</td>
+                                <td class="align-r">right</td>
+                                <td class="align-r">right</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- //검색결과목록 -->
+                    <!-- //목록 -->
+
+                </li>
+            </ul>
+
+            
+        </div>
+    </div><!-- //guide-wrap -->
+
+    <!-- bottom sheet layer -->
+    <div class="l-dim"></div>
+    <div class="l-bottom layerBottom" id="layerBottom01">
+        Bottom sheet content
+    </div>
+    <!-- //bottom sheet layer -->
+</body>
+</html>

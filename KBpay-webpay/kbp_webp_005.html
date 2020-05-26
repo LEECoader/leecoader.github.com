@@ -1,0 +1,128 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+김수영             2020-05-21          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>휴대폰번호로그인</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/ui.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>Webpay 로그인</h1>
+            <button type="button" class="btn close">닫기</button>
+        </header>
+        <div class="container">
+            <div class="contents-wrap">
+                <!--contents-->
+                <div class="contents kbp_webp_005"> <!-- contents + 페이지별 class 삽입 -->
+                    <h2 class="tit">휴대폰번호, 주민등록증에 있는 <span class="underline">생년월일+ 뒤1자리를</span> 입력해주세요</h2>
+
+                    <!--form 입력 목록-->
+                    <div class="form-wrap">
+                        <ul class="form-text-list">
+                            <!--전화번호 입력-->
+                            <li>
+                                <!--통신사 선택-->
+                                <div class="ph-cell">
+                                    <div class="form_text ph" onclick="opBotSheet('layerBottom01')">
+                                        <label for="ph-co">통신사</label>
+                                        <input type="text" id="ph-co" class="text" value="">
+                                    </div>
+                                </div>
+                                <!--전화번호 번호 입력-->
+                                <div class="ph-cell">
+                                    <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                        <label for="ph">전화번호</label>
+                                        <input type="number" id="ph" class="text" value="">
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </div>
+                                    <em class="error-txt">error text</em>
+                                </div>
+                            </li>
+                            <!--주민등록번호 입력-->
+                            <li>
+                                <div class="form_text match"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="id-number">주민등록번호</label>
+                                    <div class="pass-input-match">
+                                        <div class="pass-input">
+                                            <input type="tell"  id="id-number" class="certi-input first text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                        </div>
+                                        <span class="dash"></span>
+                                        <div class="pass-input">
+                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <input type="tell" class="text black" placeholder="&#9679;" value="" readonly>
+                                            <input type="tell" class="text black" placeholder="&#9679;" value="" readonly>
+                                            <input type="tell" class="text black" placeholder="&#9679;" value="" readonly>
+                                            <input type="tell" class="text black" placeholder="&#9679;" value="" readonly>
+                                            <input type="tell" class="text black" placeholder="&#9679;" value="" readonly>
+                                            <input type="tell" class="text black" placeholder="&#9679;" value="" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <em class="error-txt">error text</em>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//form 입력 목록-->
+
+                    <div class="underline-link align-r"><a href="#">KB Pay 간편가입하기</a></div>
+                </div>
+                <!--//contents-->
+
+                <!-- Bottom button area -->
+                <div class="bottom-btn-area">
+                    <div class="btn-group">
+                        <button class="btn large yellow" type="button" disabled><span>로그인</span></button> <!-- 활성화 > disabled 삭제 -->
+                    </div>
+                </div>
+                <!-- //Bottom button area -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 통신사 선택 : bottom sheet layer -->
+    <div class="l-dim"></div>
+    <div class="l-bottom" id="layerBottom01">
+        <div class="l-bottom-wrap">
+            <div class="head">
+                <h1>통신사 선택</h1>
+                <button type="button" class="close">닫기</button>
+            </div>
+            <div class="l-contents">
+                <!-- 컨텐츠영역 -->
+                <ul class="bottom-list">
+                    <li><button type="button">SKT</button></li>
+                    <li><button type="button">KT</button></li>
+                    <li><button type="button">LG U+</button></li>
+                    <li><button type="button">SKT 알뜰폰</button></li>
+                    <li><button type="button">KT 알뜰폰</button></li>
+                    <li><button type="button">LG U+ 알뜰폰</button></li>
+                </ul>
+                <!-- //컨텐츠영역 -->
+            </div>
+            <div class="btn-group">
+                <button class="btn medium yellow" type="button" ><span>확인</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- //통신사 선택 : bottom sheet layer -->
+
+</body>
+</html>
