@@ -3,7 +3,7 @@
 작업자              날짜                   내용
 -------------------------------------------------------------------
 김수영             2020-05-20          최초작성
-
+김수영             2020-05-29          플랫폼 마케팅 수신 동의 항목 삭제
 
 -->
 <!DOCTYPE html>
@@ -37,7 +37,7 @@
                         <li>
                             <div class="head">
                                 <label for="" class="f-chk checkAll"><input type="checkbox"><span>KB Pay 이용약관 전체동의</span></label>
-                                <button class="ico btn on" type="button on">열고닫기</button>
+                                <button class="ico btn on" type="button" onclick="agreeCombo(this);">열고닫기</button>
                             </div>
                             <ul class="list">
                                 <li>
@@ -56,6 +56,7 @@
                                     <label for="terms4" class="f-chk type02"><input id="terms4" name="terms4" type="checkbox"></label>
                                     <span><a href="" class="show-detail">[선택] Push 알림 동의</a></span>
                                 </li>
+                                <!-- 2020-05-29 삭제
                                 <li>
                                     <label for="terms5" class="f-chk type02"><input id="terms5" name="terms5" type="checkbox"></label>
                                     <span><a href="" class="show-detail">[선택] 플랫폼 마케팅 수신 동의</a></span>
@@ -71,13 +72,13 @@
                                             
                                         </li>
                                     </ul>
-                                </li>
+                                </li> -->
                             </ul>
                         </li>
                         <li>
                             <div class="head">
                                 <label for="" class="f-chk checkAll"><input type="checkbox"><span>휴대폰 본인인증 이용약관 전체동의</span></label>
-                                <button class="ico btn on" type="button on">열고닫기</button>
+                                <button class="ico btn on" type="button" onclick="agreeCombo(this);">열고닫기</button>
                             </div>
                             <ul class="list">
                                 <li>
@@ -105,7 +106,7 @@
             <!--//contents-->
 
             <!-- Bottom button area -->
-            <div class="bottom-btn-area">
+            <div class="bottom-btn-area fixed"><!-- 20200602 fixed 클래스 추가 -->
                 <div class="btn-group">
                     <button class="btn large yellow" type="button" disabled> <!-- 약관 전체 동의 시 disabled 삭제-->
                             <span>확인</span>

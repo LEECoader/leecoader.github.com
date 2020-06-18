@@ -3,7 +3,7 @@
 작업자              날짜                   내용
 -------------------------------------------------------------------
 김수영             2020-05-22          최초작성
-
+김수영             2020-05-27          비밀번호 필드 수정, 하단버튼 삭제
 
 -->
 <!DOCTYPE html>
@@ -30,28 +30,27 @@
                     <p class="txt02 align-c">결제비밀번호 입력</p>
                     
                     <div class="passWrap card-pass">
-                        <!--비밀번호 실제 입력 칸-->
-                        <div class="pass-input pass">
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
+                       <!--2020-05-27 수정-->
+                       <div class="pass-input-match password">
+                            <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                            <div class="pass-input">
+                                <span class="dot yellow on"></span> <!--활성화 class 'on'-->
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                            </div>
                         </div>
-                        <!--//비밀번호 실제 입력 칸-->
-                        <div class="pass-bg">
-                            <input class="certi-input" type="password" value="1">
-                            <input class="certi-input" type="password" value="1">
-                            <input class="certi-input" type="password" value="1">
-                            <input class="certi-input" type="password" value="1">
-                            <input class="certi-input" type="password" value="1">
-                            <input class="certi-input" type="password" value="1">
-                        </div>
+                        <!--//2020-05-27 수정-->
 
                         <!--error text-->
-                        <em class="error-txt certi">연속된 3자리 숫자가 포함되어 있습니다.<br>다시 입력해주세요.</em> <!--케이스별 에러문구-->
+                        <em class="error-txt certi">연속된 3자리 숫자가 포함되어 있습니다.<br>다시 입력해주세요.</em> 
+                        <em class="error-txt certi">동일한 4자리 숫자가 포함되어 있습니다.<br>다시 입력해주세요.</em>
+                        <em class="error-txt certi">휴대전화번호의 일부가 포함되어 있습니다.<br>다시 입력해주세요.</em>
+                        <em class="error-txt certi">생년월일의 일부가 포함되어 있습니다.<br>다시 입력해주세요.</em>
                         <!--//error text--> 
+
                     </div>
 
                     <!--tooltip-->
@@ -66,16 +65,6 @@
                    
                 </div>
                 <!--//contents-->
-
-                <!-- Bottom button area -->
-                <div class="bottom-btn-area">
-                    <div class="btn-group">
-                        <button class="btn large yellow" type="button" disabled> <!-- 활성화 > disabled 삭제-->
-                                <span>다음</span>
-                        </button>
-                    </div>
-                </div>
-                <!-- //Bottom button area -->
                 
             </div>
         </div>

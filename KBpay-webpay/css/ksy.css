@@ -1,240 +1,221 @@
 @charset "utf-8";
 
-/* common */
-input::-ms-clear {display:none;}
-input {padding:0; margin:0; background:transparent; border: 0;}
-input:focus {cursor: none; outline: none;}
-/* input type number 일때 우측 화살표 제거 */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none;}
-
-input::placeholder {color:#eee !important;}
-input:-ms-input-placeholder {color:#eee !important;}
-input::-webkit-input-placeholder {color:#eee !important;}
-
-.contents > [class*="tit"] {padding-top: 24px; padding-bottom: 24px;} /* contents 바로 하단에 오는 title 위아래 여백 공통 */
-
-/* title */
-.tit {font-size:20px; font-weight: normal; line-height: 1.5; letter-spacing: -0.4px; color: #222;}
-.tit > .underline {position: relative;}
-.tit > .underline:after {content: ""; display: block; position: absolute; bottom: -3px;left: 0; width: 100%; height: 14px; background: #ffe57f;z-index:-1}
-.tit02 {font-size: 16px; font-weight: bold; line-height: 1.5; letter-spacing: -0.4px; color: #222;}
-
-/* text */
-.txt {font-size: 14px; line-height: 1.43; letter-spacing: -0.2px; color: #666;}
-.txt02 {font-size: 18px; line-height: 1.44; letter-spacing: -0.4px; color: #222;}
-
 /* list */
-.list-ico > li {position: relative; padding:24px 0 24px 40px; border-bottom:1px solid #eee; font-size: 14px; color:#666; line-height: 1.43; background-position:0 24px;background-repeat:no-repeat; background-size:32px 32px;}
+.list-ico > li {position: relative; padding:24px 0 0; font-size: 16px; color:#666; line-height: 1.5; letter-spacing: -0.4px; }
 .list-ico > li .strong {display:block; padding-bottom:8px; font-size:16px; color:#222; font-weight: bold;}
-.list-ico li.li1 {background-image:url(../images/icon/ico_sms_info_01.png);}
-.list-ico li.li2 {background-image:url(../images/icon/ico_sms_info_02.png);}
-.list-ico li.li3 {background-image:url(../images/icon/ico_sms_info_03.png);}
-.list-ico li.li4 {background-image:url(../images/icon/ico_sms_info_04.png);}
+.list-ico.num {counter-reset: section; }
+.list-ico.num > li {position:relative; padding:24px 0 24px 31px; font-size:14px; line-height: 1.43; letter-spacing: -0.2px; color: #666666; }
+.list-ico.num > li + li {border-top:1px solid #eee;}
+.list-ico.num > li:first-child {padding-top:16px;}
+.list-ico.num > li:first-child:before {top:16px;}
+.list-ico.num > li:last-child {padding-bottom:8px;}
+.list-ico.num > li:before {content: "0" counter(section)""; counter-increment: section; position:absolute; top:23px; left:0; font-size:18px; color:#222; line-height:21px; font-weight:bold}
 
-.list-dot > li {position:relative; padding:0 0 8px 11px; font-size: 14px; line-height: 1.43; letter-spacing: -0.2px; color: #666;}
-.list-dot > li:before {content:""; display:block; position:absolute; top:9px; left:0; width:3px; height:3px; background:#999; border-radius:50%;}
+.list-dot > li {position:relative; padding:0 0 5px 11px; font-size: 16px; line-height: 1.5; letter-spacing: -0.4px; color: #666;}
+.list-dot > li:before {content:""; display:block; position:absolute; top:10px; left:0; width:4px; height:4px; background:#999; border-radius:50%; -webkit-border-radius:50%;}
+.list-dot.type02 > li {padding:0 0 16px 0; }
+.list-dot.type02 > li:before {display:none} 
 
-/* 약관상세 */
-.terms-view {position: relative;}
-.terms-view .terms-btn {position: fixed; top: 50%; display: block; width: 25px; height: 0; padding-top: 48px; background-size: 100% auto !important; overflow: hidden;}
-.terms-view .terms-btn.left {left: 0; background-image: url(../images/icon/ico_btn_terms_arrow_left.png);}
-.terms-view .terms-btn.right {right: 0; background-image: url(../images/icon/ico_btn_terms_arrow_right.png);}
+/* underline link*/
+.resend-tip {padding-top:32px; text-align:right;}
+.resend-tip > button,
+.resend-tip > a {display:inline-block; padding:0 0 3px; font-size:16px; color:#666; letter-spacing: -0.2px; border-bottom: 1px solid #aaa; background:#fff}
+.resend-tip > button + button,
+.resend-tip > a + button,
+.resend-tip > button + a {margin-left:13px;}
+.passWrap + .resend-tip {padding-top:16px; text-align:center;}
+
+@media only screen and (max-width: 320px) {
+    .resend-tip > button + button,
+    .resend-tip > a + button,
+    .resend-tip > button + a {margin-top:8px; margin-left: 0;}
+}
 
 /* 인증번호 입력 */
-.passWrap {position:relative;text-align:center;}
-.passWrap .time {padding:13px 0 0; font-size:12px; color:#ff0000}
+.passWrap {position:relative; text-align:center;}
+.passWrap .time {padding:19px 0 0; font-size:14px; line-height:20px; color:#ff0000}
 
-.pass-input {position:relative; z-index:1;}
-.pass-input input {position:relative; width:24px; font-size:24px; line-height:27px; text-align: center; vertical-align:middle;  caret-color: transparent;}
-/*.pass-input input.value {padding-left:5px; border:1px solid red; min-width:30px; width:auto; font-size:24px; letter-spacing:12px;}*/
-.pass-input input::placeholder {font-size:35px;}
-.pass-input input:-ms-input-placeholder{font-size:35px;}
-.pass-input input::-webkit-input-placeholder {font-size:35px;}
+.pass-input {position:relative; display:inline-block; z-index:1;}
+.pass-input .hidden-field {position:absolute; top:0; left:0; z-index:-1;}
+.pass-input .dot {position:relative; display:inline-block; width:12px; height:40px; font-size:18px; color:#222; line-height:37px; vertical-align:middle}
+.pass-input .dot:before {content:""; display:block; position:absolute; top:13px; left:0; width:12px; height:12px; border-radius:50%; -webkit-border-radius:50%; background:#eee;}
+.pass-input .dot.black {text-indent:-9999em}
+.pass-input .dot.black:before {background:#222}
+.pass-input .dot.on.black:before {display:block; background:#222}
+.pass-input .dot.on:before {display:none; background:none}
+.pass-input .dash {color:#aaa; line-height:40px;}
 
-/* 결제비밀번호 입력 */
+.id-number .pass-input {width:50%; float:left;} /* 주민번호 앞자리 + 뒷자리 */
+.form_text.on .pass-input {padding-top:22px;} /* 정보입력 > 마스킹처리 input */
+.form_text.error .pass-input {padding-top:22px;}
+
+/* 결제비밀번호 입력 > 숫자로 받음 */
+.password {opacity:1 !important}
+.password .pass-input .dot {font-size:24px; width:24px; height:24px; line-height:24px;}
+.password .pass-input .dot:before {top:6px; left:4px; width:16px; height:16px;}
+.password .pass-input .dot + .dot {margin-left:0;}
+
+/* 결제비밀번호 입력 > 도트로 받음 */
+.password .pass-input .dot.yellow.on {text-indent: -99999em;}
+.password .pass-input .dot.yellow.on:before {display:block; background:#ffcc00}
+
 .pass-input.pass input {color:#ffcc00; font-size:60px; line-height:60px;}
 .pass-bg {position:absolute; top:0; left:0; width:100%; text-align:center;}
 .pass-bg input {width:24px; font-size:60px; line-height:60px; color:#eee; text-align:center;}
 .pass-bg input.black {color:#222}
 
-.resend-tip {padding-top:40px; text-align:center;}
-.resend-tip > button,
-.resend-tip > a  {padding:0 0 3px; font-size:14px; color:#666; letter-spacing: -0.2px; border-bottom: 1px solid #aaa; background:#fff}
-.resend-tip > button + button,
-.resend-tip > a + button,
-.resend-tip > button + a  {margin-left:13px;}
-
-/* 키패드
-.keypad-wrap {position:fixed; bottom:0; left:0; width:100%; }
-.keypad-wrap > ul {width:100%; overflow:hidden;}
-.keypad-wrap > ul li {float:left; width:25%;}
-.keypad-wrap > ul li .number {display:block; height:48px; line-height:48px; text-align: center; font-size:24px; color:#222; font-weight:300;}
-.keypad-wrap .btn-group {padding-top:8px;}
- */
 .btn.gray.type02 {background:#c4c4c4;}
 .btn.yellow.type02 {background:#e2b916}
 
-/* form list */
+/* form list (정보입력 화면) */
+.form-wrap {padding-top:16px;}
+.tit + .form-wrap {padding-top:8px;}
+
 .form-text-list li {width:100%;}
 .form-text-list li + li {padding-top:32px;}
 .form-text-list li:after {content:""; display:block; clear:both;}
 
 .form_text {position:relative; display:block; height:64px; line-height:64px; border-bottom:1px solid #ddd}
-.form_text.on {border:1px solid #ffcc00; border-radius:8px;}
-.form_text.out {border-radius:0; border:1px solid #fff; border-bottom:1px solid #ddd}
-.form_text.out.error {border-radius: 8px;}
+.form_text.on {border-color:#ffcc00;} /* active 상태*/
+.form_text.on.out {border-color:#ddd} /* 값 입력 후 focusout */
 
-.form_text label {position:absolute; top:0; left:16px; right:0; font-size:16px; line-height:64px; transition: .3s; z-index:2; color: #888; letter-spacing: -0.4px;}
-.form_text.on label {top:8px; font-size:14px; line-height:17px; z-index:1}
+.form_text label {position:absolute; top:0; left:0; right:0; font-size:18px; line-height:64px; transition: .3s; -webkit-transition: .3s; z-index:2; color: #888; letter-spacing: -0.4px; display: block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;} /* lebel default */
+.form_text.on label {top:1px; font-size:14px; line-height:17px; z-index:1} /* focus 후 lebel 위치이동 */
 
-.form_text .btn-delete {opacity:0; position:absolute; top:4px; right:0; display:block; width:56px; height:0; padding-top:56px; overflow: hidden; background:url(../images/icon/ico_input_delete.png) center center no-repeat; background-size: 24px 24px; z-index:3;}
+.form_text .btn-delete {opacity:0; position:absolute; top:4px; right:0; display:block; width:56px; height:0; padding-top:56px; overflow: hidden; background:url(../images/icon/ico_input_delete.png) center center no-repeat; background-size: 24px 24px; z-index:3;} /* form 입력시 삭제버튼 */
 .form_text.on .btn-delete {opacity:1}
 .form_text.on.out .btn-delete {opacity:0;}
 .form_text.on.out input:focus + .btn-delete {opacity:1}
 
-.form_text .text {opacity:0; position:absolute; top:32px; left:16px; height:24px; padding:0; max-width:90%; font-size:16px; color:#222; line-height:24px; border:0; z-index:1;} 
-.form_text .text:focus {outline: none;}
+.form_text .text {opacity:0; position:absolute; top:21px; left:0; height:40px; padding:0; max-width:90%; font-size:18px; color:#222; line-height:40px; background: #fff; border:0; z-index:1;} 
 .form_text.on .text {opacity:1; z-index:2}
+.form_text .text:read-only, .form_text .text:disabled {color:#888}
+.form_text .text:read-only + .btn-delete ,
+.form_text .text:disabled + .btn-delete {display:none !important}
+.form_text .text:focus {outline: none;}
+.form_text .text.card-number {letter-spacing: 4px; width:100%;}
 
-.form_text .dash {opacity:0; position:relative; padding:0 27px;}
-.form_text .dash:before {content:""; display:inline-block; width:8px; height:1px; margin-top:-3px; background:#aaa; vertical-align:middle;}
-.form_text.on .dash {opacity:1}
+/* 숫자 or 패스워드로 받을 때 */
+.pass-input-match {position:relative; opacity:0;}
+.pass-input-match .text {position:absolute; top:65px; left:0; width:100%; z-index:-1; opacity:0;}
+.form_text.on .pass-input-match,
+.form_text.error .pass-input-match {opacity:1; line-height: 40px;}
+.form_text.on .pass-input-match .text,
+.form_text.error .pass-input-match .text  {opacity:0; z-index:-1}
 
-.form_text .slash {opacity:0; position:relative; padding:0 27px; display:inline-block; font-size:16px; color:#222}
-.form_text.on .slash {opacity:1}
+.card-pass .pass-input-match {padding-top:16px;} /* 화면 가운데 비밀번호 */
+.card-pass .pass-input-match .text, /* dot fill*/
+.pass-input-match.password .text {top:45px;} /* 숫자 fill */ 
+ 
+/* cvc */
+.form_text.on .pass-input-match .text.cvc {top:21px; opacity:1; z-index:1; font-size:18px; color:#222; line-height:40px; }
+.pass-input-match .text.cvc::placeholder {font-size:16px; color:#888 !important}
+.pass-input-match .text.cvc:-ms-input-placeholder {font-size:16px; color:#888 !important}
+.pass-input-match .text.cvc::-webkit-input-placeholder {font-size:16px; color:#888 !important}
 
 @media only screen and (max-width: 320px) {
-    .form_text .dash {padding:0 10px}
+    .pass-input .dot + .dot {margin-left:-3px;}
 }
 
-.error-txt {display:block; padding-top:16px; width:100%; font-size:12px; color:#ff0000; line-height: 1.33; letter-spacing: -0.2px;}
-.error-txt:before {content:"!"; display:inline-block; margin-right:4px; width:16px; height:16px; border-radius:50%; border:1px solid #ff0000; text-align:center; line-height:16px;}
-.error-txt.certi {text-align:center;}
+.error-txt {display:block; padding-top:24px; width:100%; font-size:12px; color:#ff0000; line-height: 1.33; letter-spacing: -0.2px;}
+.error-txt:before {content:"!"; display:block; width:16px; height:16px; border-radius:50%; -webkit-border-radius:50%; border:1px solid #ff0000; text-align:center; line-height:16px;}
+.error-txt.type02 {position: relative; padding-top:8px; padding-left:23px;}
+.form_text + .error-txt {display:none; position: relative; padding-top:8px; padding-left:23px;}
+.form_text + .error-txt:before, 
+.error-txt.type02:before {position:absolute; top:7px; left:0; }
+
+.error-txt.certi {text-align:center; padding-top:16px;}
 .error-txt.certi:before {display:none}
-.time + .error-txt.certi {padding-top:8px;}
-.form_text + .error-txt {display:none; padding-top:8px;}
-.form_text.error {border:1px solid #ff0000; border-radius: 8px;}
+.time + .error-txt.certi {padding-top:6px;}
+
+.form_text.error {border-color:#ff0000;}
 .form_text.error + .error-txt {display:block;}
-.form_text.error label {top:8px; font-size:14px; line-height:17px; z-index:1}
+.form_text.error label {top:1px; font-size:14px; line-height:17px; z-index:1}
 .form_text.error .text {opacity:1; z-index:2}
 .form_text.match.error .pass-input-match {opacity:1}
-.passWrap.card-pass .error-txt {padding-top:0;}
 
-.form_text.on.dis {background:#f8f8f8; border:0; border-radius:0; border-bottom:1px solid #ddd;}
-.form_text.on.dis .btn-delete {display:none}
-.form_text.on.dis .text {color:#888}
-
-.form_text.match .pass-input-match {position: absolute; top:32px; left:16px; opacity: 0;}
-.form_text.match.on .pass-input-match {opacity:1}
-
-.form_text.match .pass-input input {position:relative;top:0; left:0; width:13px; font-size:16px; line-height:24px;}
-.form_text.match .pass-input, 
-.form_text.match .dash {float:left; line-height:24px; vertical-align:middle;}
-
-.form_text.match .pass-input input::placeholder {font-size:25px;}
-.form_text.match .pass-input input:-ms-input-placeholder{font-size:25px;}
-.form_text.match .pass-input input::-webkit-input-placeholder {font-size:25px;}
-
-input.black::placeholder {color:#222 !important}
-input.black::-webkit-input-placeholder {color:#222 !important}
-input.black:-ms-input-placeholder {color:#222 !important}
-
-.form_text.ph:after {content:""; display:block; position:absolute; top:20px; right:16px; width:24px; height:24px; background:url(../images/icon/ico_form_select.png) center center no-repeat; background-size:100%; z-index:3}
+.form_text.ph:after {content:""; display:block; position:absolute; top:0; right:0; width:48px; height:64px; background:url(../images/icon/ico_form_select.png) center center no-repeat; background-size:16px 16px; z-index:3}
 .ph-cell {float:left;width:40%}
 .ph-cell + .ph-cell {width:60%; padding-left:8px;}
 
+/* 주소입력 */
 .form_text.line2 {height:88px;}
-.form_text.line2 .text {width:75%; height:48px; top:35px; line-height:19px; resize:none}
+.form_text.line2 .text {width:75%; height:48px; top:35px; font-size: 16px; font-weight: 500; line-height: normal; letter-spacing: -0.4px; color: #222222; resize:none;}
 .form_text.line2 label {top:10px;}
-.form_text.line2 .btn-delete {top:15px;}
+.form_text.line2 .btn-delete {top:15px; background:url(../images/icon/ico_input_delete02.png) center center no-repeat; background-size:24px 24px;}
 
-/* 인증번호 */
-.form_text .time {display:none; position:absolute; top:31px; right:56px; font-size:12px; line-height: 24px; color:#fb5252;}
+/* 인증번호 유효시간/완료 표시 */
+.form_text .time {display:none; position:absolute; top:0; right:16px; font-size:14px; line-height: 64px; color:#fb5252;}
 .form_text.on .time, .form_text.error .time {display:block;}
-.form_text .certi_ok {position:absolute; top:0; right:0; font-size:12px; line-height: 64px; color:#fb5252;}
+.form_text .certi_ok {position:absolute; top:0; right:0; font-size:14px; line-height: 64px; color:#fb5252;}
 .form_text  .text.gray {color:#888}
 
-/* form ui list*/
-.form_text .label {position:absolute; top:8px; left:16px; right:0; font-size:14px; line-height:17px; transition: .3s; z-index:2; color: #888; letter-spacing: -0.4px;}
-.form_text .text-normal {position:absolute; top:32px; left:16px; height:24px; padding:0; font-size:16px; color:#888; line-height:24px; border:0; z-index:1;}
-.form_text .text-normal em {display:inline-block; width:10px; height:0; padding-top:10px; margin:0 1px; border-radius:50%; background:#eee; vertical-align:middle; overflow: hidden;}
+.or {position:relative; width:100%; font-size: 14px; line-height: 1.43; letter-spacing: -0.2px; text-align:center; color: #666666;}
+.or > span {position:relative; display: inline-block; padding:0 23px; text-align:center; background: #fff;}
+.or:before {content:""; display:block; position:absolute; top:50%; left:0; width:100%; border-top:1px dashed #aaa}
 
-/* link */
-.underline-link {font-size: 14px; line-height: 1.43; letter-spacing: -0.2px; color: #666;}
-.underline-link > a {padding-bottom:3px; color: #666; border-bottom:1px solid #aaa}
-.form-wrap + .underline-link {padding-top:24px;}
-
-/* 카드 목록 box */
-.card-box {position: relative; display: table; padding: 8px; width: 100%; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06); cursor: pointer;}
-.card-box.line {border:1px solid #eee;}
-.card-box .img-area{position: relative; display: table-cell; width: 96px; height: 64px; vertical-align: top;}
-.card-box .img-area .card-img{display: block; height: 100%;}
-.card-box .img-area .card-icon{position: absolute; right: 0; top: 48px; width: 24px; height: 16px;}
-.card-box .txt-area{display: table-cell; padding: 0 36px 0 16px; vertical-align: middle;}
-.card-box .txt-area .card-tit{display: block; font-size: 14px; color: #222; font-weight: 500; line-height: 20px; letter-spacing: -0.2px;}
-.card-box .txt-area .card-tit .card-type{margin-right: 4px; color:#6236ff;}
-.card-box .txt-area .card-tit .card-type02{margin-right: 4px; color:#66b300;}
-.card-box .txt-area .card-tit .card-type03{margin-right: 4px; color:#da4abd;}
-.card-box .txt-area .card-num{font-size: 12px; color: #888; line-height: 16px;}
-
-/* tool tip */
-.tool-tip {position: relative; padding:16px 0; text-align: center;}
-.tool-tip > p {font-size: 14px; line-height: 1.43; letter-spacing: -0.2px; }
-.tool-tip > p a {color: #666;}
-.tool-tip > p a:after {content:"?"; display:inline-block; margin-left:4px; width:16px; height:16px; border-radius: 50%; border:1px solid #aaa; font-size:12px; line-height:13px; color:#aaa; box-sizing: border-box; text-align: center; vertical-align: middle;}
-.tip-box {position:absolute; top:44px; left:0; width:100%; padding:24px 56px 24px 24px; background: #f8f8f8;border-radius: 8px; box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.1); z-index:9; display:none;} 
-.tip-box .btn-close {position:absolute; top:16px; right:16px; width:24px; height:0; padding-top:24px; overflow:hidden; background:url(../images/icon/ico_btn_tip_close_24.png) center center no-repeat; background-size:100%; }
-.tip-box > p {font-size:14px; color:#666; line-height: 1.43; letter-spacing: -0.2px; text-align: left;}
 
 /*--------------------------page 별도 수정--------------------------*/
 
 /* 휴대폰 인증번호 문자 미수신 안내 팝업 */
-.kbp_webp_052 .list-ico {margin-top:24px; border-top:1px solid #ddd;}
-.kbp_webp_052 .list-dot {padding:16px 0}
+.kbp_webp_052 .txt {padding-top:16px;}
+.kbp_webp_052 .list-ico {margin-top:16px; border-top:1px solid #ddd;}
+.kbp_webp_052 .list-dot {margin-top:24px; padding:24px 0; border-top: 1px solid #eee; }
 
 /* 카드인증 */
-.card-box.certi {margin:25px 0 32px; cursor:none}
-.card-box.certi .btn-more {display:block; position:absolute; top:16px; right:16px; width:24px; height:0; padding-top:24px; background:url(../images/icon/ico_form_select.png) center center no-repeat; background-size:100%; overflow:hidden; z-index:3}
-
-/* 카드선택 */
-.kbp_webp_053 .btn-group {background:#f8f8f8}
+.card-box.certi {margin:25px 0 32px; cursor:none; }
+.card-box.certi .btn-list {display:table-cell; width:24px; height:60px; text-indent:-9999em; vertical-align:middle; background:url(../images/icon/ico_btn_card-box_link.png) right center no-repeat; background-size:24px 24px;}
 
 /* 결제비밀번호 입력 */
 .kbp_webp_015_1 .txt02,
 .kbp_webp_021 .txt02,
 .kbp_webp_016 .txt02,
 .kbp_webp_039 .txt02,
-.kbp_webp_040 .txt02 {padding:60px 0 0}
+.kbp_webp_040 .txt02,
+.kbp_webp_063 .txt02 {padding:56px 0 0}
 
 /* 카드인증정보 입력 */
 .form_text.match.card .dash {padding:0 5px; line-height:25px;}
-.form_text.match.card .pass-input input {width:10px;height:19px;}
+.form_text.match.card .pass-input input {width:10px; height:19px;}
 .form_text.match.card .pass-input input::placeholder {font-size:20px;}
-.form_text.match.card .pass-input input:-ms-input-placeholder{font-size:20px;}
+.form_text.match.card .pass-input input:-ms-input-placeholder {font-size:20px;}
 .form_text.match.card .pass-input input::-webkit-input-placeholder {font-size:20px;}
-.cvc-img {position:relative; display:block; margin:16px auto 24px; width:178px;}
-.cvc-img:after {content:""; position:absolute; top:32px; left:50%; margin-left:-76.5px; display:block; width: 153px; height: 80px; -webkit-filter: blur(8px); filter: blur(8px); background-color: rgba(0, 0, 0, 0.15); z-index:1;}
-.cvc-img img {position:relative; height:104px; z-index:2}
+.cvc-img {position:relative; display:block; margin:16px auto 0; width:192px;}
+.cvc-img img {position:relative; width:100%; z-index:2}
 
 @media only screen and (max-width: 320px) {
 .form_text.match.card .dash {line-height:28px}
 .form_text.match.card .pass-input input {width:8px;}
 .form_text.match.card .pass-input input::placeholder {font-size:16px;}
-.form_text.match.card .pass-input input:-ms-input-placeholder{font-size:16px;}
+.form_text.match.card .pass-input input:-ms-input-placeholder {font-size:16px;}
 .form_text.match.card .pass-input input::-webkit-input-placeholder {font-size:16px;}
 }
 
 /* CVC/CVC2 란 ? */
 .kbp_webp_030 p,
-.kbp_webp_030_1 p  {padding-bottom:24px;}
+.kbp_webp_030_1 p {padding-bottom:24px;}
 
 /* 카드비밀번호 인증*/
-.kbp_webp_055_1 .txt02 {padding-top:48px;}
+.kbp_webp_061 .txt02 {padding-top:48px;}
 
 /* 카드사용등록 */
-.cash-return {padding-top:64px; text-align:center;}
-.cash-return > p {padding-bottom:8px;}
+.cash-return {padding:24px 0 0; text-align:center;}
+.cash-return + .resend-tip {padding-top:24px; text-align: center;}
 
 /* 기업공용카드등록*/
 .kbp_webp_032 .btn-group {padding:24px 0 16px; }
+
+/* 소득공제 신청시 유의사항 */
+.kbp_webp_056 .list-dot {margin:16px 0 24px}
+
+/* 생년월일 입력 */
+.kbp_webp_066 .tit + .form-wrap {padding-top: 0;}
+
+/* 휴대폰번호로그인 */
+.kbp_webp_005 .tool-tip {padding:0 0 40px; margin-top: 40px;}
+.kbp_webp_005 .list-type02 {padding-top:32px;}
+.kbp_webp_005 .list-type02 .kakao {border:1px solid #eee}
+.kbp_webp_005 .btn-group {padding:24px 0 32px; }
+.kbp_webp_005 .agree {padding-top: 16px;}
+.kbp_webp_005 .agree .f-chk span {font-size:14px; color: #666; border-bottom:1px solid #666;}
+.kbp_webp_005 .agree .f-chk::before {margin-right:4px;}

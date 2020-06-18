@@ -3,6 +3,8 @@
 작업자              날짜                   내용
 -------------------------------------------------------------------
 이진규             2020-05-22          최초작성
+이진규             2020-05-27          last-border 클래스 추가, 카드리스트 구조 변경
+이진규             2020-06-05          포인트리, 상품권포인트 이미지 변경
 
 
 -->
@@ -40,47 +42,56 @@
                             <p class="list-none">카드등록 후 결제할 수 있습니다.</p>
                             <!-- 카드가 없는 경우 -->
 
-                            <ul class="list">
+                            <!-- 05-27 카드리스트 구조 변경 -->
+                            <!-- <ul class="list">
                                 <li>
                                     <div class="card-box">
                                         <p class="img-area">
-                                            <img class="card-img" src="./images/etc/sample_card01.png" alt="Liiv M 체크카드">
-                                            <img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">
+                                            <span class="img">
+                                                <img src="./images/etc/sample_card01.png" alt="Liiv M 체크카드">
+                                            </span>
                                         </p>
                                         <p class="txt-area">
-                                            <span class="card-tit"><em class="card-type">[체크]</em>Liiv M 체크카드</span>
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">Liiv M 체크카드</span>
+                                            <span class="card-type">신용</span>
                                             <span class="card-num">9445 - 20** - **** - 4759</span>
-                                            <button type="button" class="btn-del" onclick="showToast('contents', '카드를 삭제했습니다.')">삭제</button>
+                                            <button type="button" class="btn-del">삭제</button>
                                         </p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="card-box">
                                         <p class="img-area">
-                                            <img class="card-img" src="./images/etc/sample_card02.png" alt="카카오페이 체크카드">
-                                            <img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">
+                                            <span class="img">
+                                                <img src="./images/etc/sample_card02.png" alt="카카오페이 체크카드">
+                                            </span>
                                         </p>
                                         <p class="txt-area">
-                                            <span class="card-tit"><em class="card-type">[기업개별]</em>카카오페이 체크카드</span>
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">카카오페이 체크카드</span>
+                                            <span class="card-type">체크</span>
                                             <span class="card-num">9445 - 20** - **** - 4759</span>
-                                            <button type="button" class="btn-del" onclick="showToast('contents', '카드를 삭제했습니다.')">삭제</button>
+                                            <button type="button" class="btn-del">삭제</button>
                                         </p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="card-box">
                                         <p class="img-area">
-                                            <img class="card-img" src="./images/etc/sample_card03.png" alt="펭수 노리 체크카드">
-                                            <img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">
+                                            <span class="img">
+                                                <img src="./images/etc/sample_card03.png" alt="펭수 노리 체크카드">
+                                            </span>
                                         </p>
                                         <p class="txt-area">
-                                            <span class="card-tit"><em class="card-type">[체크]</em>펭수 노리 체크카드</span>
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">펭수 노리 체크카드</span>
+                                            <span class="card-type">기업개별</span>
                                             <span class="card-num">9445 - 20** - **** - 4759</span>
-                                            <button type="button" class="btn-del" onclick="showToast('contents', '카드를 삭제했습니다.')">삭제</button>
+                                            <button type="button" class="btn-del">삭제</button>
                                         </p>
                                     </div>
                                 </li>
-                            </ul>
+                            </ul> -->
+                            <!-- // 05-27 카드리스트 구조 변경 -->
+
                         </dd>
                         <dt>
                             <span>기업공용카드</span>
@@ -91,21 +102,25 @@
                             <!-- <p class="list-none">카드등록 후 결제할 수 있습니다.</p> -->
                             <!-- 카드가 없는 경우 -->
 
+                            <!-- 05-27 카드리스트 구조 변경 -->
                             <ul class="list">
                                 <li>
                                     <div class="card-box">
                                         <p class="img-area">
-                                            <img class="card-img" src="./images/etc/sample_card01.png" alt="Liiv M 체크카드">
-                                            <img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">
+                                            <span class="img">
+                                                <img src="./images/etc/sample_card01.png" alt="Liiv M 체크카드">
+                                            </span>
                                         </p>
                                         <p class="txt-area">
-                                            <span class="card-tit"><em class="card-type">[기업공용]</em>Liiv M 체크카드</span>
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">Liiv M 체크카드</span>
+                                            <span class="card-type">기업공용</span>
                                             <span class="card-num">9445 - 20** - **** - 4759</span>
-                                            <button type="button" class="btn-del" onclick="showToast('contents', '카드를 삭제했습니다.')">삭제</button>
+                                            <button type="button" class="btn-del">삭제</button>
                                         </p>
                                     </div>
                                 </li>
                             </ul>
+                            <!-- // 05-27 카드리스트 구조 변경 -->
                         </dd>
                         <dt>
                             <span>증권카드</span>
@@ -116,21 +131,26 @@
                             <!-- <p class="list-none">카드등록 후 결제할 수 있습니다.</p> -->
                             <!-- 카드가 없는 경우 -->
 
+                            <!-- 05-27 카드리스트 구조 변경 -->
                             <ul class="list">
                                 <li>
                                     <div class="card-box">
                                         <p class="img-area">
-                                            <img class="card-img" src="./images/etc/sample_card04.png" alt="Liiv M 체크카드">
-                                            <img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">
+                                            <span class="img">
+                                                <img src="./images/etc/sample_card04.png" alt="Liiv M 체크카드">
+                                            </span>
+                                            
                                         </p>
                                         <p class="txt-area">
-                                            <span class="card-tit"><em class="card-type">[기업공용]</em>Liiv M 체크카드</span>
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">Liiv M 체크카드</span>
+                                            <span class="card-type">증권</span>
                                             <span class="card-num">9445 - 20** - **** - 4759</span>
-                                            <button type="button" class="btn-del" onclick="showToast('contents', '카드를 삭제했습니다.')">삭제</button>
+                                            <button type="button" class="btn-del">삭제</button>
                                         </p>
                                     </div>
                                 </li>
                             </ul>
+                            <!-- // 05-27 카드리스트 구조 변경 -->
                         </dd>
                         <dt>
                             <span>기프트카드</span>
@@ -141,59 +161,71 @@
                             <!-- <p class="list-none">카드등록 후 결제할 수 있습니다.</p> -->
                             <!-- 카드가 없는 경우 -->
 
+                            <!-- 05-27 카드리스트 구조 변경 -->
                             <ul class="list">
                                 <li>
                                     <div class="card-box">
                                         <p class="img-area">
-                                            <img class="card-img" src="./images/etc/sample_card05.png" alt="Liiv M 체크카드">
-                                            <img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">
+                                            <span class="img">
+                                                <img src="./images/etc/sample_card05.png" alt="Liiv M 체크카드">
+                                            </span>
+                                            
                                         </p>
                                         <p class="txt-area">
-                                            <span class="card-tit"><em class="card-type04">[기프트]</em>Liiv M 체크카드</span>
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">Liiv M 체크카드</span>
+                                            <span class="card-type">기프트</span>
                                             <span class="card-num">9445 - 20** - **** - 4759</span>
-                                            <button type="button" class="btn-del" onclick="showToast('contents', '카드를 삭제했습니다.')">삭제</button>
+                                            <button type="button" class="btn-del">삭제</button>
                                         </p>
                                     </div>
                                 </li>
                             </ul>
+                            <!-- // 05-27 카드리스트 구조 변경 -->
                         </dd>
                         <dt>
                             <span>은행계좌</span>
                             <a href="#" class="btn-more">더보기</a>
                         </dt>
-                        <dd>
+                        <dd class="last-border"> <!-- // 05-27 last-border 클래스 추가 -->
                             <!-- 카드가 없는 경우 -->
                             <!-- <p class="list-none">카드등록 후 결제할 수 있습니다.</p> -->
                             <!-- 카드가 없는 경우 -->
 
+                            <!-- 05-27 카드리스트 구조 변경 -->
                             <ul class="list">
                                 <li>
                                     <div class="card-box">
                                         <p class="img-area">
-                                            <img class="card-img" src="./images/etc/sample_card02.png" alt="카카오페이 체크카드">
-                                            <img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">
+                                            <span class="img">
+                                                <img src="./images/etc/sample_card02.png" alt="카카오페이 체크카드">
+                                            </span>
+                                            
                                         </p>
                                         <p class="txt-area">
-                                            <span class="card-tit">직장인우대통장</span>
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">직장인우대통장</span>
+                                            <span class="card-type">은행</span>
                                             <span class="card-num">9445 - 20** - **** - 4759</span>
-                                            <button type="button" class="btn-del" onclick="showToast('contents', '카드를 삭제했습니다.')">삭제</button>
+                                            <button type="button" class="btn-del">삭제</button>
                                         </p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="card-box">
                                         <p class="img-area">
-                                            <img class="card-img" src="./images/etc/sample_card03.png" alt="펭수 노리 체크카드">
-                                            <img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">
+                                            <span class="img">
+                                                <img src="./images/etc/sample_card03.png" alt="펭수 노리 체크카드">
+                                            </span>
                                         </p>
                                         <p class="txt-area">
-                                            <span class="card-tit">KB스타통장</span>
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">KB스타통장</span>
+                                            <span class="card-type">은행</span>
                                             <span class="card-num">9445 - 20** - **** - 4759</span>
-                                            <button type="button" class="btn-del" onclick="showToast('contents', '카드를 삭제했습니다.')">삭제</button>
+                                            <button type="button" class="btn-del">삭제</button>
                                         </p>
                                     </div>
                                 </li>
                             </ul>
+                            <!-- // 05-27 카드리스트 구조 변경 -->
 
                         </dd>
                         <dt>
@@ -203,20 +235,25 @@
                             </div>
                         </dt>
                         <dd>
+                            <!-- 05-27 카드리스트 구조 변경 -->
                             <ul class="list">
                                 <li>
                                     <div class="card-box point">
                                         <p class="img-area">
-                                            <img class="card-img" src="./images/etc/sample_card05.png" alt="카카오페이 체크카드">
-                                            <img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">
+                                            <span class="img">
+                                                <img src="./images/etc/card_pointree.png" alt="포인트리"> <!-- // 06-05 포인트리 이미지 변경 -->
+                                            </span>
+                                            
                                         </p>
                                         <p class="txt-area">
-                                            <span class="card-tit"><em class="card-type">[포인트리]</em></span>
-                                            <span class="card-point">사용가능 포인트 : <em>10,000</em>P</span>
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">KB국민 KBpay 포인트리</span>
+                                            <span class="card-type">포인트리</span>
+                                            <span class="card-point">잔액 : <em>10,000</em>P</span>
                                         </p>
                                     </div>
                                 </li>
                             </ul>
+                            <!-- // 05-27 카드리스트 구조 변경 -->
                         </dd>
                         <dt>
                             <span>상품권포인트</span>
@@ -226,20 +263,24 @@
                             </div>
                         </dt>
                         <dd>
+                            <!-- 05-27 카드리스트 구조 변경 -->
                             <ul class="list">
                                 <li>
                                     <div class="card-box voucher">
                                         <p class="img-area">
-                                            <img class="card-img" src="./images/etc/sample_card06.png" alt="카카오페이 체크카드">
-                                            <img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">
+                                            <span class="img">
+                                                <img class="card-img" src="./images/etc/card_gift.png" alt="상품권포인트"> <!-- // 06-05 상품권포인트 이미지 변경 -->
+                                            </span>
                                         </p>
                                         <p class="txt-area">
-                                            <span class="card-tit"><em class="card-type">[상품권]</em></span>
-                                            <span class="card-point">사용가능 포인트 : <em>56,000</em>P</span>
+                                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">KB국민 KBpay 상품권</span>
+                                            <span class="card-type">상품권</span>
+                                            <span class="card-point">잔액 : <em>50,000</em>P</span>
                                         </p>
                                     </div>
                                 </li>
                             </ul>
+                            <!-- // 05-27 카드리스트 구조 변경 -->
                         </dd>
                     </dl>
 

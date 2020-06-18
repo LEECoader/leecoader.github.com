@@ -4,6 +4,8 @@
 -------------------------------------------------------------------
 이진규             2020-05-20          최초작성
 이진규             2020-05-22          alert 팝업 추가
+이진규             2020-05-26          아이콘 이미지 추가, 텍스트 수정
+이진규             2020-06-05          탭 타이틀 띄어쓰기 수정, 배너슬라이드 관련 소스 삭제
 
 
 -->
@@ -32,8 +34,8 @@
                     <!-- Tab UI -->
                     <div class="tab-ui tabUI">
                         <ul class="tab-list type01 tabType01">
-                            <li><a class="active" href="#tabView01">KB Pay 결제</a></li>
-                            <li><a href="#tabView02">제휴간편결제</a></li>
+                            <li><a class="active" href="#tabView01">KBpay 결제</a></li><!-- // 05-26 텍스트 수정 -->
+                            <li><a href="#tabView02">제휴 간편결제</a></li><!-- // 06-05 띄어쓰기 수정 -->
                         </ul>
 
                         <div class="tab-contents">
@@ -41,16 +43,16 @@
                             <div class="tab-item" id="tabView01">
                                 <dl class="list-type01">
                                     <dt>
-                                        <span class="icon kb"><img src="" alt=""></span>
+                                        <span class="icon"><img src="images/icon/ico_kbpay.png" alt="KBpay"></span><!-- // 05-26 아이콘 이미지 추가 -->
                                     </dt>
                                     <dd>
-                                        <span>KB Pay APP으로 결제</span>
+                                        <span>KBpay APP으로 결제</span>
                                         <a onclick="opBotSheet('layerBottom01')">APP 설치하고 바로 결제</a>
                                     </dd>
                                 </dl>
                                 <dl class="list-type01 popOpen" onclick="openLayerPop('pop01')"><!-- // 2020-05-22 popOpen 클래스 추가 -->
                                     <dt>
-                                        <img class="icon" src="" alt="">
+                                        <img class="icon" src="images/icon/ico_direct_pay.png" alt="직접결제">
                                     </dt>
                                     <dd>
                                         <span>APP 없이 바로 결제</span>
@@ -70,12 +72,12 @@
                                 <dl class="list-type01">
                                     <dt>
                                         <span class="icon">
-                                            <img src="" alt="">
+                                            <img src="images/icon/ico_nfc.png" alt="삼성페이">
                                         </span>
                                     </dt>
                                     <dd>
                                         <p>결제비밀번호 / 지문인증 결제</p>
-                                        <img class="samsung-pay" src="./images/etc/samsungpay.png">
+                                        <img class="samsung-pay" src="./images/etc/samsungpay.png" alt="삼성페이">
                                     </dd>
                                 </dl>
                             </div>
@@ -85,8 +87,8 @@
                     <!-- //Tab UI -->
                     
 
-
-                    <div class="banner-slider">
+                    <!-- 06-05 배너 슬라이드 삭제 -->
+                    <!-- <div class="banner-slider">
                         <ul class="slider-nav">
                             <li>
                                 <button type="button" class="btn-prev" aria-label="Prev">이전</button>
@@ -128,7 +130,7 @@
                             </div>
                                 
                         </div>
-                    </div>
+                    </div> -->
                     
 
                 </div>
@@ -147,13 +149,13 @@
     <div class="l-bottom" id="layerBottom01">
         <div class="l-bottom-wrap">
             <div class="head">
-                <h1>KB Pay 설치하기</h1>
+                <h1>KBpay 설치하기</h1>
                 <button type="button" class="close">닫기</button>
             </div>
             <div class="l-contents kbp_webp_002">
                 <!-- 컨텐츠영역 -->
 
-                    <p class="txt">빠르고 간편한 KB Pay<br>지금 바로 설치해서 사용해보세요</p>
+                    <p class="txt">빠르고 간편한 KBpay<br>지금 바로 설치해서 사용해보세요</p>
 
                     <ul class="market-list">
                         <li class="aos">
@@ -229,7 +231,8 @@
     <!-- // popup -->
 
 
-    <script>
+    <!-- 06-05 슬라이드 관련 스크립트 삭제 -->
+    <!-- <script>
 
         $(document).ready(function(){
 
@@ -284,7 +287,7 @@
 
         });
 
-    </script>
+    </script> -->
 
 </body>
 </html>

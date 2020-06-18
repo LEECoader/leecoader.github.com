@@ -19,10 +19,10 @@
                 
                 <li><a href="button.html">Button</a></li>
                 <li><a href="form.html">Form</a></li>
-                <li><a href="info.html">Info</a></li>
-                <li><a href="list.html">List</a></li>
+                
+                
                 <li><a href="popup.html">Popup</a></li>
-                <li><a href="swiper.html">Swiper</a></li>
+                
                 <li><a href="tab.html">Tab</a></li>
                 <li><a href="etc.html">Etc</a></li>
             </ul>
@@ -70,7 +70,8 @@
                 <li>
 
                     <p class="guide-txt">
-                        1920 x 1080(FHD)
+                        최적해상도 : iPhone 6, 6s+, 7, 8 (개발 기준 해상도 375 x auto)<br>
+                        320 ~ 414까지 고려함
                     </p>
 
                 </li>
@@ -105,7 +106,7 @@
                         </tr>
                         <tr>
                             <td rowspan="2">js</td>
-                            <td>jquery-3.5.0.min.js</td>
+                            <td>jquery-2.2.4.min.js</td>
                             <td></td>
                             <td></td>
                         </tr>
@@ -115,14 +116,19 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td rowspan="2">util</td>
-                            <td>swiper.min.css</td>
-                            <td>swiper css 파일</td>
+                            <td rowspan="3">util</td>
+                            <td>slick.css</td>
+                            <td>swiper 기능</td>
                             <td rowspan="2">swiper</td>
                         </tr>
                         <tr>
-                            <td>swiper.min.js</td>
-                            <td>swiper js 파일</td>
+                            <td>slick.min.js</td>
+                            <td>swiper 기능</td>
+                        </tr>
+                        <tr>
+                            <td>placeholder.js</td>
+                            <td>placeholder 기능</td>
+                            <td></td>
                         </tr>
                     </table>
 
@@ -135,7 +141,8 @@
                     <ul class="guide-sub-list">
                         <li>1. css class명은 "-" (하이푼) 으로 구분지으며 직관적이고 길어지지 않도록 작명합니다.<br>(네이밍룰 엑셀 참고)</li>
                         <li>2. UI 기능구현을 위한 css (selector) 사용은 카멜표기법을 사용합니다.<br>ex) closeLayer, openLayer</li>
-                        <li>3. css 작성 혹은 기능구현을 위한 셀렉터를 생성할때 ID 사용을 지양합니다.<br>(ID는 Front-end 혹은 Back-end에서 사용할 수 있도록 합니다.)</li>
+                        <li>3. css 작성 혹은 기능구현을 위한 셀렉터를 생성할때 ID 사용을 지양합니다.<br>
+                            (ID는 Front-end 혹은 Back-end에서 사용할 수 있도록 합니다.)<br>단 팝업아이디는 사용 가능</li>
                         <li>4. 비슷한 유형의 타입을 추가 생성할 경우 최초 생성자에는 넘버를 붙이지 않고 2번째부터 사용합니다.<br>ex) txt-type, txt-type02, txt-tytpe03, ...</li>
                     </ul>
                 </li>

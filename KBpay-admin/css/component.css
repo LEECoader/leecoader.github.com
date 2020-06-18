@@ -1,107 +1,136 @@
 @charset "utf-8";
 
-/* Accordion menu */
+/* 본문 바로가기 */
+.skip-navi {display: block; position: absolute; top: -100px; color: #000; text-align: center;}
+.skip-navi:focus {position: static;}
 
 
-
-/* Agree */
+/* Article top */
+.article-top {display: table; position: relative; width: 100%; height: 40px;}
+.article-top > * {display: table-cell; width: 50%;}
+.article-top .left-col h3 {position: absolute; left: 0; top: 7px;}
+.article-top .right-col {text-align: right;}
 
 
 /* Board */
-.board-write table td {border-bottom: 1px solid #ddd;}
-.board-write table td.lb {font-weight: 700;}
-.board-write table td.f-txt-only {padding: 1px 0;}
+.board-top {display: table; width: 100%; margin-top: 30px;}
+.board-top > * {display: table-cell; width: 50%;}
+.board-top .right-col {text-align: right;}
+.board-top .result-count {display: inline-block; height: 40px; color: #666; font-weight: 600; line-height: 40px; letter-spacing: -0.4px;}
+.board-top .result-count span {letter-spacing: 0;}
 
-.board-view table td {border-bottom: 1px solid #ddd;}
+.board-list {margin-top: 10px; border-top: 1px solid #000; background: #fff;}
+.board-list table td {padding: 5px 8px; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; color: #666; font-size: 14px; text-align: center; line-height: 20px;}
+.board-list table td:last-child {border-right: 0;}
+.board-list table td .lnk {color: #5431b0; text-decoration: underline;}
+.board-list table .head td {color: #222; font-weight: 700; letter-spacing: -2px; background: #eee;}
 
-.board-list {border-top: 1px solid #000;}
-.board-list table td {border-bottom: 1px solid #ddd;}
+.board-detail {margin-top: 10px; background: #fff;}
+.board-detail table td {padding: 10px 20px; border-bottom: 1px solid #ddd; color: #666; font-size: 14px;}
+.board-detail table td.tit {color: #222; font-weight: 700; background: #eee; letter-spacing: -1px;}
+.board-detail table td .req {display: inline-block; font-size: 0;}
+.board-detail table td .req::before {content: "*"; margin-left: 3px; color: #ff0000; font-size: 14px;}
+.board-detail.bdt-line {border-top: 1px solid #ddd;}
+.board-detail table td .btn-type.type03 {margin-top: 5px;}
+
+.board-bottom {position: relative; margin-top: 30px;}
+.board-bottom .left-col {position: absolute; left: 0; top: 0;}
+.board-bottom .paging {font-size: 0; text-align: center;}
+.board-bottom .paging button {width: 30px; height: 30px; margin-right: -1px; border: 1px solid #ddd; font-size: 0; text-indent: -9999px; background: #fff; vertical-align: top;}
+.board-bottom .paging .first {background: #fff url(../images/ico_paging_first.png) no-repeat center;}
+.board-bottom .paging .prev {margin-right: 8px; background: #fff url(../images/ico_paging_prev.png) no-repeat center;}
+.board-bottom .paging .next {margin-left: 8px; background: #fff url(../images/ico_paging_next.png) no-repeat center;}
+.board-bottom .paging .last {background: #fff url(../images/ico_paging_last.png) no-repeat center;}
+.board-bottom .paging .num button {color: #666; font-size: 14px; font-weight: 400; text-indent: 0;}
+.board-bottom .paging .num button.cur {border: 0; color: #222; font-weight: 500; background: #ffcc00;}
+.board-bottom .right-col {position: absolute; right: 0; top: 0;}
+
+.board-bottom02 {margin-top: 30px; text-align: right;}
+
+.board-req-guide {height: 20px; text-align: right;}
+.board-req-guide span {display: inline-block; height: 20px; color: #888; font-size: 14px; line-height: 16px; letter-spacing: -0.2px; vertical-align: top;}
+.board-req-guide i::before {content: "*"; display: inline-block; color: #ff0000;}
 
 
 /* Button */
-.btn-type {display: inline-block;}
+.btn-type {display: inline-block; border: 0; cursor: pointer;}
+
+.btn-type.type01 {width: 100px; height: 30px; border: 1px solid #ddd; border-radius: 15px; color: #666; font-size: 14px; font-weight: 400; text-align: center; letter-spacing: -0.35px; background: #fff;}
+
+.btn-type.type02 {height: 40px; padding: 0 14px; border: 1px solid #222; color: #222; font-size: 14px; font-weight: 500; text-align: center; background: #fff;}
+
+.btn-type.type03 {height: 30px; color: #666; font-size: 14px; font-weight: 500; text-align: center; background: #f1f1f1;}
+
+.btn-type.type04 {height: 30px; padding: 0 10px; color: #fff; font-size: 14px; font-weight: 500; text-align: center; background: #222;}
+
+.btn-type.type05 {height: 40px; color: #fff; font-size: 16px; font-weight: 500; line-height: 24px; background: #444;}
+
+.btn-type.excel {width: 138px; height: 40px; padding-left: 49px; border: 1px solid #aaa; color: #222; font-size: 14px; font-weight: 500; text-align: left; letter-spacing: -1.5px; background: #fff url(../images/ico_excel.png) no-repeat 20px center;}
+
+.scrolltop {display: none; position: fixed; left: 1190px; bottom: 40px; width: 50px; height: 50px;}
+.scrolltop button {display: block; width: 50px; height: 50px; border-radius: 50%; background: #313131 url(../images/ico_arrow_up_scrolltop.png) no-repeat center 11px;}
+.scrolltop span {display: block; position: absolute; left: 0; top: 23px; width: 100%; color: #fff; font-size: 16px; font-weight: 500; letter-spacing: -0.2px; }
+
+
+/* Condition */
+.condition {position: relative; padding: 20px 0 18px 0; background: #fff;}
+.condition > * {display: table-cell;}
+.condition .left-col {width: auto;}
+.condition .left-col table {width: 100%;}
+.condition .left-col table td {padding-bottom: 10px;}
+.condition .left-col table tr:last-child td {padding-bottom: 0;}
+.condition .left-col table td.tit {padding: 0 10px 0 25px; color: #222; font-size: 16px; font-weight: 600; letter-spacing: -0.2px; vertical-align: top;}
+.condition .left-col table td.tit span {display: inline-block; height: 40px; line-height: 38px;}
+.condition .right-col {width: 130px; padding: 0 20px 2px 20px; vertical-align: top;}
+.condition .right-col button {display: block; width: 100%; color: #fff; font-size: 18px; font-weight: 700; background: #303030;}
 
 
 /* Form */
-select {-webkit-appearance: none; -moz-appearance: none; appearance: none;}
-select::-ms-expand {display: none;}
+.f-ipt-txt {height: 40px; padding: 0 15px; border: 1px solid #ddd;}
 
-.f-ipt-txt.delete {position: relative;}
-.f-ipt-txt .ico-del {display: none; position: absolute; right: 0; top: 0;}
+.f-select {display: inline-block; position: relative;}
+.f-select::after {content: ""; display: block; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); width: 8px; height: 5px; background: url(../images/ico_combo_down8x5.png) no-repeat;}
+.f-select select {width: 100%; height: 40px; padding: 0 25px 0 15px; border: 1px solid #ddd; color: #666; font-size: 14px; line-height: 24px; letter-spacing: -0.35px;}
 
-.f-ipt-select {position: relative;}
-.f-ipt-select::after {content: "▼"; display: block; position: absolute; right: 0; top: 0;}
-.f-ipt-select input {width: 100%;}
-
-.f-chk {position: relative;}
-.f-chk::before {content: ""; display: inline-block; width: 15px; height: 15px; border: 1px solid #ddd;}
-.f-chk.checked::before {content: "v";}
+.f-chk {display: inline-block; position: relative; height: 20px;}
+.f-chk::before {content: ""; display: inline-block; width: 20px; height: 20px; border: 1px solid #ddd; background: #fff; vertical-align: top;}
+.f-chk.checked::before {content: ""; border: 0; background: url(../images/ico_checkbox_on.png) no-repeat;}
 .f-chk.disabled::before {background: #eee;}
 .f-chk input {position: absolute; left: -9999px; top: -9999px;}
+.f-chk span {display: inline-block; height: 20px; line-height: 20px; margin-left: 1px; vertical-align: top;}
 
-.f-rdo::before {content: ""; display: inline-block; width: 15px; height: 15px; border: 1px solid #ddd; border-radius: 50%;}
-.f-rdo.checked::before {content: "●";}
-.f-rdo.diabled::before {background: #eee;}
-.f-rdo input {position: absolute; left: -9999px; top: -9999px;}
+.f-txtar {padding: 15px; border: 1px solid #ddd; outline: none; resize: none;}
 
-.f-switch {display: inline-block; min-width: 50px; height: 20px; padding-right: 16px; border: 1px solid #ddd; border-radius: 10px; font-size: 12px;}
-.f-switch span {display: block; position: relative; height: 100%; text-align: right;}
-.f-switch span::after {content: ""; display: block; position: absolute; left: 1px; top: 0; width: 18px; height: 18px; border-radius: 50%; background: #999; transition: .2s;}
-.f-switch span::before {content: "OFF"; display: inline; position: relative; right: -16px;}
-.f-switch input {position: absolute; left: -9999px;}
-.f-switch input:checked + span {text-align: left;}
-.f-switch input:checked + span::after {left: 100%; background: blue;}
-.f-switch input:checked + span::before {content: "ON"; right: auto;}
+.dates {display: inline-block; position: relative;}
+.dates::after {content: ""; display: block; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); width: 15px; height: 15px; background: url(../images/ico_calendar.png) no-repeat;}
+.dates input {height: 40px; padding: 0 15px; border: 1px solid #ddd;}
 
-.f-group {display: table; width: 100%;}
-.f-group > * {display: table-cell; width: 50%;}
-.f-group.type01 dt {width: 80px; font-size: 13px;}
-.f-group.type01 dd {width: auto;}
 .ipt-group {display: flex;}
 .ipt-group > * {flex-grow: 1;}
 .ipt-group input[type=text] {width: 100%;}
 
-.f-in-bar {flex-grow: 0; width: 20px !important; text-align: center !important;}/* 하이푼 */
-.f-in-txt {}
-.ssn-first {flex-grow: 0; width: 20px !important;}/* 주민번호 뒷자리중 첫번째 */
-.ssn-hidden {flex-grow: 0; width: 100px !important;}/* 주민번호 뒷자리 hidden */
-.ipt-group .community-cpn {flex-grow: 0; width: 80px !important;}/* 통신사 */
-
-
-/* Guide text */
-.guide-txt-list li {position: relative; padding-left: 7px;}
-.guide-txt-list li::before {content: ""; display: block; position: absolute; left: 0; top: 10px; width: 3px; height: 1px; background: #666;}
+.f-in-txt {color: #aaa; line-height: 36px;}
 
 
 /* Icon */
 .ico {display: inline-block;}
 
 
-/* Info */
-.info.type01 strong {text-decoration: underline;}
-
-
-/* Layer popup */
-.l-pop {position: static;}
-
-.l-header {background: #f5f5f5;}
-
-.l-footer .btn-group {display: flex;}
-.l-footer .btn-group > * {flex-grow: 1; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
-.l-footer .btn-group.half > * {width: 50%;}
-.l-footer .btn-group .btn.blue {color: #fff; background: #0078d7;}
-
-.l-dim {display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: #000; opacity: .4; z-index: 10;}
-
-.l-bottom {position: absolute; left: 0; bottom: -100px; width: 100%; height: 100px; background: #fff; z-index: 10;}
+/* Title */
+.tit01 {height: 32px; color: #222; font-size: 24px; font-weight: 700; line-height: 32px; letter-spacing: -0.4px;}
+.tit02 {height: 32px; color: #222; font-size: 20px; font-weight: 700; line-height: 32px; letter-spacing: -0.4px;}
+.tit03 {height: 24px; color: #666; font-size: 16px; font-weight: 600; line-height: 24px; letter-spacing: -0.2px;}
 
 
 /* Tab */
-.tab-list.type01 {border-bottom: 1px solid #ddd;}
-.tab-list.type01::after {content: ""; display: block; clear: both;}
-.tab-list.type01 li {float: left; padding: 5px 0;}
-.tab-list.type01 li a {display: block; padding: 0 10px; color: #000;}
-.tab-list.type01 li a.active {font-weight: 700;}
+.tab-type01 > ul::after {content: ""; display: block; clear: both;}
+.tab-type01 > ul > li {float: left;}
+.tab-type01.two > ul > li {width: 50%;}
+.tab-type01.three > ul > li {width: 33.33%;}
+.tab-type01.three > ul > li:last-child {width: 33.34%;}
+.tab-type01 > ul > li > a {display: block; height: 60px; color: #666; font-size: 16px; text-align: center; line-height: 60px; background: #fff;}
+.tab-type01 > ul > li > a.on {color: #222; font-weight: 700; background: #ffcc00;}
+
 
 .tab-contents .tab-item {display: none;}
 .tab-contents .tab-item:first-child {display: block;}

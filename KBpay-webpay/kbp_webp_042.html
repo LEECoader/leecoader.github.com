@@ -3,6 +3,8 @@
 작업자              날짜                   내용
 -------------------------------------------------------------------
 이진규             2020-05-25          최초작성
+이진규             2020-05-28          카드리스트 구조변경, 하단버튼 수정
+이진규             2020-05-29          타이틀 삭제
 
 
 -->
@@ -30,93 +32,115 @@
                 
                 <div class="contents kbp_webp_042">
                     
-                    <h2 class="tit">등록할 <span class="underline">계좌를 선택</span>해주세요</h2>
+                    <!-- <h2 class="tit">등록할 <span class="underline">계좌를 선택해주세요</span></h2> --> <!-- // 05-29 타이틀 삭제 -->
 
-                    <ul class="list-type03">
-                        <li>
-                            <a href="#" class="card-box">
-                                <p class="img-area">
-                                    <img class="card-img" src="./images/etc/sample_card01.png" alt="Liiv M 체크카드">
-                                    <img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">
-                                </p>
-                                <p class="txt-area">
-                                    <span class="card-tit"><em class="card-type">[Liiv]</em>국민 직장인 우대 통장</span>
-                                    <span class="card-num">1234 - 5678 - **** - 90</span>
-                                </p>
-                                
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="card-box">
-                                <p class="img-area">
-                                    <img class="card-img" src="./images/etc/sample_card02.png" alt="카카오페이 체크카드">
-                                    <img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">
-                                </p>
-                                <p class="txt-area">
-                                    <span class="card-tit"><em class="card-type">[Liiv]</em>OOOO 통장</span>
-                                    <span class="card-num">1234 - 5678 - **** - 90</span>
-                                </p>
-                                
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="card-box active"><!-- class="active" 추가 시 선택됨 -->
-                                <p class="img-area">
-                                    <img class="card-img" src="./images/etc/sample_card03.png" alt="펭수 노리 체크카드">
-                                    <img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">
-                                </p>
-                                <p class="txt-area">
-                                    <span class="card-tit"><em class="card-type">[Liiv]</em>OOOO 통장</span>
-                                    <span class="card-num">1234 - 5678 - **** - 90</span>
-                                </p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="card-box">
-                                <p class="img-area">
-                                    <img class="card-img" src="./images/etc/sample_card04.png" alt="톡톡 pay 카드">
-                                    <img class="card-icon" src="./images/icon/ico_card_jcb.png" alt="JCB">
-                                </p>
-                                <p class="txt-area">
-                                    <span class="card-tit"><em class="card-type">[Liiv]</em>OOOO 통장</span>
-                                    <span class="card-num">1234 - 5678 - **** - 90</span>
-                                </p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="card-box">
-                                <p class="img-area">
-                                    <img class="card-img" src="./images/etc/sample_card05.png" alt="Liiv Mate 체크카드">
-                                    <img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">
-                                </p>
-                                <p class="txt-area">
-                                    <span class="card-tit"><em class="card-type">[Liiv]</em>OOOO 통장</span>
-                                    <span class="card-num">1234 - 5678 - **** - 90</span>
-                                </p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="card-box">
-                                <p class="img-area">
-                                    <img class="card-img" src="./images/etc/sample_card06.png" alt="H.Point 체크카드">
-                                    <img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">
-                                </p>
-                                <p class="txt-area">
-                                    <span class="card-tit"><em class="card-type">[Liiv]</em>OOOO 통장</span>
-                                    <span class="card-num">1234 - 5678 - **** - 90</span>
-                                </p>
-                            </a>
-                        </li>
-                    </ul>
+                    <!-- 05-28 카드리스트 구조 변경 -->
+                    <div>
+                        <ul class="list-type03">
+                            <li>
+                                <div class="card-box">
+                                    <a href="#" class="img-area"> <!-- class="active" 추가시 선택됨 -->
+                                        <span class="img">
+                                            <img src="./images/etc/sample_card01.png" alt="Liiv M 체크카드">
+                                        </span>
+                                    </a>
+                                    <p class="txt-area">
+                                        <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">Liiv M 체크카드</span>
+                                        <span class="card-type">신용</span>
+                                        <span class="card-num">9445 - 20** - **** - 4759</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card-box">
+                                    <a href="#" class="img-area">
+                                        <span class="img">
+                                            <img src="./images/etc/sample_card02.png" alt="카카오페이 체크카드">
+                                        </span>
+                                    </a>
+                                    <p class="txt-area">
+                                        <span class="card-tit"><img class="card-icon" src="images/icon/ico_card_master.png" alt="MASTER">카카오페이 체크카드</span>
+                                        <span class="card-type">체크</span>
+                                        <span class="card-num">9445 - 20** - **** - 4759</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card-box">
+                                    <a href="#" class="img-area active"><!-- class="active" 추가 시 선택됨 -->
+                                        <span class="img">
+                                            <img src="./images/etc/sample_card03.png" alt="펭수 노리 체크카드">
+                                        </span>
+                                    </a>
+                                    <p class="txt-area">
+                                        <span class="card-tit"><img class="card-icon" src="images/icon/ico_card_master.png" alt="MASTER">펭수 노리 체크카드</span>
+                                        <span class="card-type">기업개별</span>
+                                        <span class="card-num">9445 - 20** - **** - 4759</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card-box">
+                                    <a href="#" class="img-area">
+                                        <span class="img">
+                                            <img src="./images/etc/sample_card04.png" alt="톡톡 pay 카드">
+                                        </span>
+                                    </a>
+                                    <p class="txt-area">
+                                        <span class="card-tit"><img class="card-icon" src="images/icon/ico_card_master.png" alt="MASTER">톡톡 pay 카드</span>
+                                        <span class="card-type">기업공용</span>
+                                        <span class="card-num">9445 - 20** - **** - 4759</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card-box">
+                                    <a href="#" class="img-area">
+                                        <span class="img">
+                                            <img src="./images/etc/sample_card05.png" alt="Liiv Mate 체크카드">
+                                        </span>
+                                    </a>
+                                    <p class="txt-area">
+                                        <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">Liiv Mate 체크카드</span>
+                                        <span class="card-type">증권</span>
+                                        <span class="card-num">9445 - 20** - **** - 4759</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card-box">
+                                    <a href="#" class="img-area">
+                                        <span class="img">
+                                            <img src="./images/etc/sample_card06.png" alt="H.Point 체크카드">
+                                        </span>
+                                    </a>
+                                    <p class="txt-area">
+                                        <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">H.Point 체크카드</span>
+                                        <span class="card-type">가족카드</span>
+                                        <span class="card-num">9445 - 20** - **** - 4759</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button type="button" class="btn-plus"><span>은행계좌 직접등록</span></button>
+
+                    </div>
+                    <!-- // 05-28 카드리스트 구조변경 -->
+
+                    
                     
                 </div>
-
+                
+                <!-- 05-28 하단 버튼 수정 -->
                 <div class="bottom-btn-area fixed">
-                    <div class="btn-group half">
-                        <button class="btn large gray" type="button"><span>직접등록</span></button>
+                    
+                    <div class="btn-group">
                         <button class="btn large yellow" type="button"><span>등록</span></button>
                     </div>
                 </div>
+                <!-- // 05-28 하단 버튼 수정 -->
+
 
             </div>
         </div>

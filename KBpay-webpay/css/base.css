@@ -8,7 +8,7 @@ dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, thead, tb
     margin: 0; padding: 0;
 }
 
-body {font-family: Malgun Gothic, AppleGothic, sans-serif;}
+body, button, textarea {font-family: Malgun Gothic, AppleGothic, sans-serif;} 
 
 blockquote, button, fieldset, iframe {border: 0;}
 cite, em, u, address, i {font-style: normal;}

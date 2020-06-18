@@ -3,7 +3,7 @@
 작업자              날짜                   내용
 -------------------------------------------------------------------
 김수영             2020-05-25          최초작성
-
+김수영             2020-05-28          입력필드 수정
 
 -->
 <!DOCTYPE html>
@@ -31,20 +31,19 @@
                     <p class="txt02 align-c">카드비밀번호 확인</p>
                     
                     <div class="passWrap card-pass">
-                        <!--비밀번호 실제 입력 칸-->
-                        <div class="pass-input pass">
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1" autofocus="autofocus"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
+                        <!--2020-05-28 마크업수정-->
+                        <!--비밀번호 4자리 받을 때-->
+                        <div class="pass-input-match password">
+                            <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                            <div class="pass-input">
+                                <span class="dot yellow on">1</span> <!--활성화 class 'on'-->
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                            </div>
                         </div>
-                        <!--//비밀번호 실제 입력 칸-->
-                        <div class="pass-bg">
-                            <input class="certi-input" type="password" value="1">
-                            <input class="certi-input" type="password" value="1">
-                            <input class="certi-input" type="password" value="1">
-                            <input class="certi-input" type="password" value="1">
-                        </div>
+                        <!--//비밀번호 4자리 받을 때-->
+                        <!--//2020-05-28 마크업수정-->
 
                         <!--error text-->
                         <em class="error-txt certi">카드비밀번호가 일치하지 않습니다.</em> <!--케이스별 에러문구-->

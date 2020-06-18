@@ -28,97 +28,99 @@
                 <!--contents-->
                 <div class="contents kbp_webp_034"> <!-- contents + 페이지별 class 삽입 -->
 
-                    <h2 class="tit">본인의 카드정보를<br><span class="underline">입력/확인 해주세요</span> </h2>
-
-                   <!--form 입력 목록-->
+                    <!--2020-05-27 수정 -->
+  
+                    <!--form 입력 목록-->
                     <div class="form-wrap">
-                        <ul class="form-text-list">
-                            <!--카드번호-->
-                            <li>
-                                <div class="form_text match card"> <!-- 오류 class :  'error' 추가 -->
-                                    <label for="id-number">카드번호</label>
-                                    <div class="pass-input-match">
-                                        <div class="pass-input">
-                                            <input type="tell"  id="id-number" class="certi-input first text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                        </div>
-                                        <span class="dash"></span>
-                                        <div class="pass-input">
-                                            <input type="tell" class="certi-input first text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="password" class="certi-input text dot" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="password" class="certi-input text dot" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                        </div>
-                                        <span class="dash"></span>
-                                        <div class="pass-input">
-                                            <input type="password" class="certi-input text dot" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="password" class="certi-input text dot" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="password" class="certi-input text dot" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="password" class="certi-input text dot" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                        </div>
-                                        <span class="dash"></span>
-                                        <div class="pass-input">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <em class="error-txt">error text</em>
-                            </li>
-                            <!--유효기간-->
-                            <li>
-                                <div class="form_text match card"> <!-- 오류 class :  'error' 추가 -->
-                                    <label for="date">유효기간</label>
-                                    <div class="pass-input-match">
-                                        <div class="pass-input">
-                                            <input type="tell"  id="date" class="certi-input first text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            /
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                        </div>
-                                    </div>
-                                    <button class="btn-delete" type="button">삭제</button>
-                                </div>
-                                <em class="error-txt">error text</em>
-                            </li>
-                            <!--CVC-->
-                            <li>
-                                <div class="form_text match card"> <!-- 오류 class :  'error' 추가 -->
-                                    <label for="cvc">CVC</label>
-                                    <div class="pass-input-match">
-                                        <div class="pass-input">
-                                            <input type="tell"  id="cvc" class="certi-input first text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                        </div>
-                                    </div>
-                                    <button class="btn-delete" type="button">삭제</button>
-                                </div>
-                                <em class="error-txt">error text</em>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--//form 입력 목록-->
-
-                    <em class="error-txt certi">결제수단으로 등록 가능한 카드가 아닙니다.<br>확인 후 다시 입력해주세요</em>
-
-                    <p class="resend-tip">
-                        <button class="btnOpenBot" type="button" onclick="opBotSheet('layerBottom01')">증권카드 이용 안내</button>
-                        <button class="btnOpenBot" type="button" onclick="opBotSheet('layerBottom02')">CVC(CVV)란?</button>
-                    </p>
-
-                </div>
-                <!--//contents-->
+                         <ul class="form-text-list">
+                             <!--카드번호-->
+                             <li>
+                                 <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                     <label for="card-number">카드번호 16자리</label>
+                                     <div class="pass-input-match">
+                                         <input type="text" class="text" id="card-number"> <!--//실제 입력 받는 칸 -->
+                                         <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                                         <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                                         <div class="pass-input">
+                                             <span class="dot on">1</span> <!--활성화 class 'on'-->
+                                             <span class="dot"></span>
+                                             <span class="dot"></span>
+                                             <span class="dot"></span>
+                                         </div>
+                                         <div class="pass-input">
+                                             <span class="dash">-</span> 
+                                             <span class="dot"></span>
+                                             <span class="dot"></span>
+                                             <span class="dot black"></span>
+                                             <span class="dot black"></span>
+                                         </div>
+                                         <div class="pass-input">
+                                             <span class="dash">-</span> 
+                                             <span class="dot black"></span>
+                                             <span class="dot black"></span>
+                                             <span class="dot black"></span>
+                                             <span class="dot black"></span>
+                                         </div>
+                                         <div class="pass-input">
+                                             <span class="dash">-</span> 
+                                             <span class="dot"></span>
+                                             <span class="dot"></span>
+                                             <span class="dot"></span>
+                                             <span class="dot"></span>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <em class="error-txt">error text</em>
+                             </li>
+                             <!--유효기간-->
+                             <li>
+                                 <div class="form_text"> <!-- 오류 class :  'error' 추가 --> 
+                                     <label for="date">유효기간(월/년)</label>
+                                     <div class="pass-input-match">
+                                         <input type="text" class="text" id="date"> <!--//실제 입력 받는 칸 -->
+                                         <div class="pass-input">
+                                             <span class="dot"></span>
+                                             <span class="dot"></span>
+                                             <span class="dash">/</span> 
+                                             <span class="dot"></span>
+                                             <span class="dot"></span>
+                                         </div>
+                                     </div>
+                                     <button class="btn-delete" type="button">삭제</button>
+                                 </div>
+                                 <em class="error-txt">error text</em>
+                             </li>
+                             <!--CVC-->
+                             <li>
+                                 <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                     <label for="cvc">CVC 3자리</label>
+                                     <div class="pass-input-match">
+                                         <input type="text" class="text cvc" id="cvc" placeholder="숫자 3자리를 입력해주세요"> <!--//실제 입력 받는 칸 -->
+                                     </div>
+                                     <button class="btn-delete" type="button">삭제</button>
+                                 </div>
+                                 <em class="error-txt">error text</em>
+                             </li>
+                         </ul>
+                     </div>
+                     <!--//form 입력 목록-->
+  
+                     <!--//2020-05-27 수정 -->
+  
+                      <em class="error-txt certi">결제수단으로 등록 가능한 카드가 아닙니다.<br>확인 후 다시 입력해주세요</em> <!--케이스별 에러문구-->
+  
+                      <p class="resend-tip">
+                          <button class="btnOpenBot" type="button" onclick="opBotSheet('layerBottom01')">증권카드 이용 안내</button>
+                          <button class="btnOpenBot" type="button" onclick="opBotSheet('layerBottom02')">CVC(CVV)란?</button>
+                      </p>
+  
+                  </div>
+                  <!--//contents-->
 
                 <!-- Bottom button area -->
                 <div class="bottom-btn-area">
                     <div class="btn-group">
-                        <button class="btn large yellow" type="button" disabled><span>다음</span></button> <!-- 활성화 > disabled 삭제 -->
+                        <button class="btn large yellow" type="button" disabled><span>등록</span></button> <!-- 활성화 > disabled 삭제 -->
                     </div>
                 </div>
                 <!-- //Bottom button area -->
@@ -141,7 +143,7 @@
                 <!-- //컨텐츠영역 -->
             </div>
             <div class="btn-group">
-                <button class="btn medium yellow" type="button" ><span>확인</span></button>
+                <button class="btn medium yellow" type="button" onclick="closeBotSheet('layerBottom01')"><span>확인</span></button>
             </div>
         </div>
     </div>

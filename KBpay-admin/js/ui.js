@@ -1,36 +1,16 @@
 $(function() {
 
-    //Accordion menu
-    $(".accordion.type01 .head a").click(function(e) {
-        e.preventDefault();
-
-        if ($(this).hasClass("on")) {console.log('has');
-            $(this).removeClass("on");
-            $(this).parents(".head").next().slideUp(150);
-        } else {console.log('non-has');
-            $(this).addClass("on");
-            $(this).parents(".head").next().slideDown(150);
-        }
+    // Left navigation scroll style
+    $(".navigation").mCustomScrollbar({
+        theme:"minimal-dark",
+        mouseWheel: {scrollAmount: 1000}
     });
 
-
-    /*
-        Form
-    */
-    // input : text / with Delete button
-    $(".f-ipt-txt.delete input").focus(function() {
-        $(this).parent().find(".ico-del").css("display", "block");
-    });
-    $(".f-ipt-txt.delete .ico-del").click(function() {
-        $(this).prev().val("");
-        $(this).css("display", "none");
-    });
-    $(".f-ipt-txt.delete input").blur(function() {
-        $(this).parents().find(".ico-del").css("display", "none");
-    });
+    // Condition search button height responsible
+    $(".condition .right-col button").height($(".condition .right-col").height());
 
     // Checkbox
-    $(".f-chk").click(function() {
+    $(".f-chk").off().click(function() {
         if (!$(this).find("input").attr("disabled")) {
             if ($(this).find("input").prop("checked")) {
                 $(this).removeClass("checked");
@@ -42,83 +22,65 @@ $(function() {
         }
     });
 
-    //약관동의 전체동의
-    $(".agree-terms .checkAll").click(function() {
-        if ($(this).find("input").prop("checked")) {
-            $(this).parent().next().find("label").addClass("checked");
-            $(this).parent().next().find("input").prop("checked", "checked");
-        } else {
-            $(this).parent().next().find("label").removeClass("checked");
-            $(this).parent().next().find("input").prop("checked", "");
-        }
-    });
-    //약관동의 아코디온
-    $(".agree-terms.type02 .head .btn").click(function() {
-        if ($(this).hasClass("on")) {console.log(1);
-            $(this).removeClass("on");
-            $(this).parent().next().slideUp(150);
-        } else {console.log(2);
-            $(this).addClass("on");
-            $(this).parent().next().slideDown(150);
-        }
-    });
+    // Calendar
+    if ($(".dates").length > 0) {
+        $(".dates input").datepicker({
+            dateFormat: 'yy-mm-dd',
+            showMonthAfterYear: true,
+            yearSuffix: '년',
+            monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+            dayNamesMin: ['일','월','화','수','목','금','토'],
+            dayNames: ['일','월','화','수','목','금','토'],
 
-
-    // Radio
-    $(".f-rdo").click(function() {
-        if (!$(this).find("input").attr("disabled")) {
-            if ($(this).find("input").prop("checked")) {
-                $(this).removeClass("checked");
-                $(this).find("input").prop("checked", false);
-            } else {
-                $(this).addClass("checked");
-                $(this).find("input").prop("checked", true);
-            }
-        }
-    });
-    $(".rdoGroup .f-rdo").click(function() {
-        $(this).parents(".rdoGroup").find(".f-rdo").removeClass("checked");
-        $(this).addClass("checked");
-    });
-
-
-    // bottom sheet
-    $(".btnOpenBot").on("click", function() {
-        $(".l-dim").show();
-        $(".layerBottom").stop().animate({
-            bottom: 0
-        }, 200, 'swing', function() {
         });
-    });
+    }
 
-    $("body").on("mouseup", function(e) {
-        var ctn = $(".layerBottom");
-        var h = $(".layerBottom").height();
-        if (ctn.has(e.target).length === 0) {
-            $(".l-dim").hide();
-            ctn.stop().animate({
-                bottom: -h
-            }, 200, 'swing', function() {
-                //after animate
-            });
+
+    // Scrolltop
+    $(".container").scroll(function() {
+        console.log( $(".container").scrollTop() );
+        if ( $(".container").scrollTop() > 0 ) {
+            $(".scrolltop").fadeIn(300);
+        } else {
+            $(".scrolltop").fadeOut(300);
         }
     });
-
-
-    // Tab
-    $(".tabType01 li a").click(function(e) {
-        e.preventDefault();
-
-        $(this).parents(".tab-list").find("a").removeClass("active");
-        $(this).addClass("active");
-
-        $(this).parents(".tabUI").find(".tab-item").hide();
-        $($(this).attr("href")).show();
+    $(".scrolltop button").click(function() {
+        $(".container").stop().animate({
+            scrollTop: 0
+        }, 400, 'swing', function() {});
     });
-    
 
     
 
 });
+
+
+/*
+    function
+*/
+
+// Navigation menu control
+function accordionCtr(obj) {
+    if ($(obj).hasClass("on")) {
+        // hide sub menu
+        $(obj).removeClass("on");
+        $(obj).next().slideUp(200);
+        
+    } else {
+        //show sub menu
+        $(obj).parent().parent().find("> li > a").removeClass("on");
+        $(obj).addClass("on");
+
+        $(obj).parent().parent().find("> li > ul").slideUp(200);
+        $(obj).next().slideDown(200);
+    }
+}
+
+
+// 레이어팝업
+function openLayer(id) {
+
+}
 
 

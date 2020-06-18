@@ -3,6 +3,10 @@
 작업자              날짜                   내용
 -------------------------------------------------------------------
 이진규             2020-05-25          최초작성
+이진규             2020-05-28          타이틀 수정
+이진규             2020-05-29          충전안내 팝업 내용 추가
+이진규             2020-06-02          충전안내 팝업 내용 추가, 하단 리스트 하단 고정으로 수정
+이진규             2020-06-05          텍스트 줄바뀜 수정, 상품권 충전안내 팝업 수정
 
 
 -->
@@ -30,38 +34,44 @@
                 
                 <div class="contents kbp_webp_047">
                     
-                    <h2 class="tit">상품권 포인트 <br><span class="underline">충전이 완료</span>되었습니다</h2>
+                    <h2 class="tit">상품권 포인트 충전이<br><span class="underline">완료되었습니다</span></h2> <!-- // 05-28 타이틀 수정 -->
                     
-                    <div class="list-type07">
-                        <ul class="top-area">
-                            <li>
-                                <dl>
-                                    <dt>해피머니 상품권 금액</dt>
-                                    <dd><span>10,000</span> P</dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt>충전 수수료(충전포인트의 8%)</dt>
-                                    <dd><span>800</span> P</dd>
-                                </dl>
-                            </li>
-                        </ul>
-                        <ul class="bottom-area">
-                            <li>
-                                <dl>
-                                    <dt>충전 상품권 포인트</dt>
-                                    <dd><span>9,200</span> P</dd>
-                                </dl>
-                            </li>
-                        </ul>
+
+                    <!-- 06-02 리스트 하단 고정으로 수정 -->
+                    <div class="bottom-fixed-contents">
+
+                        <div class="list-type07">
+                            <ul class="top-area">
+                                <li>
+                                    <dl>
+                                        <dt>해피머니 상품권 금액</dt>
+                                        <dd><span>10,000</span>P</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>충전 수수료<br>(충전포인트의 8%)</dt> <!-- // 06-05 텍스트 줄바뀜 수정 -->
+                                        <dd><span>800</span>P</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                            <ul class="bottom-area">
+                                <li>
+                                    <dl>
+                                        <dt>충전 상품권 포인트</dt>
+                                        <dd><span>9,200</span>P</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <p class="resend-tip">
+                            <button class="btnOpenBot" type="button" onclick="opBotSheet('layerBottom01')">상품권포인트 충전 안내</button>
+                        </p>
+
                     </div>
-
-
-                    <p class="resend-tip">
-                        <button class="btnOpenBot" type="button" onclick="opBotSheet('layerBottom01')">상품권포인트 충전 안내</button>
-                    </p>
-
+                    <!-- // 06-02 리스트 하단 고정으로 수정 -->
 
 
                 </div>
@@ -70,7 +80,7 @@
 
             <div class="bottom-btn-area float">
                 <div class="btn-group">
-                    <button class="btn medium yellow" type="button"><span>확인</span></button>
+                    <button class="btn large yellow" type="button"><span>확인</span></button>
                 </div>
             </div>
 
@@ -91,72 +101,63 @@
             <div class="l-contents">
                 <!-- 컨텐츠영역 -->
 
-                    <dl class="list-dot-type02">
-                        <dt>충전한도(회원/준회원) 동일</dt>
-                        <dd>
-                            <div class="table-default">
-                                <table summary="충전한도를 해피머니 캐시와 해피머니 상품권으로 구분하여 1일, 월간 한도로 나눠서 안내합니다.">
-                                    <caption>상품권 충전한도(회원/준회원 동일)</caption>
-                                    <colgroup>
-                                        <col style="width: 33.33%">
-                                        <col style="width: 33.33%">
-                                        <col style="width: 33.33%">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col" rowspan="2" class="bb-none">구분</th>
-                                            <th scope="col" colspan="2">충전한도</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">1일</th>
-                                            <th scope="col">월간</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">해피머니 캐시</th>
-                                            <td>100,000 P</td>
-                                            <td>500,000 P</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">해피머니 상품권</th>
-                                            <td>100,000 P</td>
-                                            <td>500,000 P</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </dd>
-                        <dt>수수료</dt>
-                        <dd>
-                            <ul>
-                                <li>충전 금액의 8% 차감 후 상품권 포인트로 적립됩니다.</li>
-                            </ul>
-                        </dd>
-                        <dt>소멸</dt>
-                        <dd>
-                            <ul>
-                                <li>적립월로부터 60개월 후 소멸됩니다.</li>
-                            </ul>
-                        </dd>
-                        <dt>환급</dt>
-                        <dd>
-                            <ul>
-                                <li>최근 60개월 충전 금액 총 합계의 80% 이상 사용한 경우 포인트 잔액을 환급 받으실 수 있습니다.</li>
-                                <li>환급은 본인 KB계좌(KB국민은행, KB증권, KB저축은행)로 보내기 가능합니다.</li>
-                            </ul>
-                        </dd>
-                        <dt>충전 후 취소(환불)</dt>
-                        <dd>
-                            <ul>
-                                <li>상품권 포인트로 충전 후에는 취소(환불)가 불가능합니다.</li>
-                            </ul>
-                        </dd>
-                    </dl>
+                <!-- 06-05 충전안내팝업 전체 수정 -->
+                <ul class="list-type09">
+                    <li class="list-txt">충전 후 잔액(상품권포인트) 기준으로 카드회원 및 카드 비회원은 50만P까지 충전 가능합니다.</li>
+                    <li class="list-tit">충전한도(회원/준회원 동일)</li>
+                    <li class="list-txt">
+                        <div class="table-default">
+                            <table>
+                                <caption>상품권 충전한도(회원/준회원 동일)</caption>
+                                <colgroup>
+                                    <col style="width: 36%">
+                                    <col style="width: 32%">
+                                    <col style="width: 32%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="2" class="bb-none">구분</th>
+                                        <th scope="col" colspan="2">충전한도</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">1일</th>
+                                        <th scope="col">월간</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">해피머니 캐시</th>
+                                        <td>100,000P</td>
+                                        <td>500,000P</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">해피머니 상품권</th>
+                                        <td>100,000P</td>
+                                        <td>500,000P</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li class="list-txt">충전한도는 해피머니 캐시 + 해피머니 상품권 합산된 금액으로 관리됩니다.</li>
+                    <li class="list-tit">수수료</li>
+                    <li class="list-txt">충전 금액의 8% 차감 후 상품권 포인트로 적립됩니다.</li>
+                    <li class="list-tit">소멸</li>
+                    <li class="list-txt">적립월로부터 60개월 후 소멸됩니다.</li>
+                    <li class="list-tit">환급</li>
+                    <li class="list-txt">최근 60개월 충전 금액 총 합계의 80% 이상 사용한 경우 포인트 잔액을 환급 받으실 수 있습니다.</li>
+                    <li class="list-txt">환급은 본인 KB계좌(KB국민은행, KB증권, KB저축은행)로 보내기 가능합니다.</li>
+                    <li class="list-tit">충전 후 취소(환불)</li>
+                    <li class="list-txt">상품권 포인트로 충전 후에는 취소(환불)가 불가능합니다.</li>
+                </ul>
+                <!-- // 06-05 충전안내팝업 전체 수정 -->
 
                     
 
                 <!-- //컨텐츠영역 -->
+            </div>
+            <div class="btn-group">
+                <button class="btn medium yellow" type="button" onclick="closeBotSheet('layerBottom01')"><span>확인</span></button>
             </div>
         </div>
     </div>

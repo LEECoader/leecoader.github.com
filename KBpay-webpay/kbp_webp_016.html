@@ -4,7 +4,7 @@
 -------------------------------------------------------------------
 김수영             2020-05-22          최초작성
 김수영             2020-05-25          alert 팝업 추가
-
+김수영             2020-05-27          비밀번호 필드/하단버튼명 수정
 -->
 <!DOCTYPE html>
 <html lang="ko">
@@ -30,37 +30,34 @@
                     <p class="txt02 align-c">결제비밀번호 확인</p>
                     
                     <div class="passWrap card-pass">
-                        <!--비밀번호 실제 입력 칸-->
-                        <div class="pass-input pass">
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
+                        <!--2020-05-27 수정-->
+                        <div class="pass-input-match password">
+                            <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                            <div class="pass-input">
+                                <span class="dot yellow on"></span> <!--활성화 class 'on'-->
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                            </div>
                         </div>
-                        <!--//비밀번호 실제 입력 칸-->
-                        <div class="pass-bg">
-                            <input class="certi-input" type="password" value="1">
-                            <input class="certi-input" type="password" value="1">
-                            <input class="certi-input" type="password" value="1">
-                            <input class="certi-input" type="password" value="1">
-                            <input class="certi-input" type="password" value="1">
-                            <input class="certi-input" type="password" value="1">
-                        </div>
+                        <!--//2020-05-27 수정-->
 
                         <!--error text-->
                         <em class="error-txt certi">결제 비밀번호가 일치하지 않습니다.</em> <!--케이스별 에러문구-->
                         <!--//error text--> 
                     </div>
                     
+                    <!-- 맞게 입력 시 노출-->
                     <div class="bottom-btn-area fixed">
                         <div class="btn-group">
-                            <button class="btn large yellow" type="button" disabled> <!-- 맞게 입력 시 disabled 삭제-->
-                                <span>다음</span>
+                            <button class="btn large yellow" type="button"> 
+                                <span>회원가입</span> <!--//2020-05-27 버튼명 수정-->
                             </button>
                         </div>
                     </div>
+                    <!-- //맞게 입력 시 노출-->
 
                 </div>
                 <!--//contents-->

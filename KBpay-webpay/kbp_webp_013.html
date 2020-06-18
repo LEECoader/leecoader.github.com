@@ -3,8 +3,9 @@
 작업자              날짜                   내용
 -------------------------------------------------------------------
 김수영             2020-05-13          최초작성
-
-
+김수영             2020-05-27          입력필드 마크업 수정
+김수영             2020-06-04          '인증번호재전송' 버튼추가
+김수영             2020-06-05           h2 강조 범위 수정 
 -->
 <!DOCTYPE html>
 <html lang="ko">
@@ -19,27 +20,35 @@
 <body>
     <div class="wrap">
         <header class="header">
-            <h1>본인인증 로그인</h1>
+            <h1>본인인증</h1>
             <button type="button" class="btn close">닫기</button>
         </header>
         <div class="container">
             <div class="contents-wrap">
                 <!--contents-->
                 <div class="contents kbp_webp_013"> <!-- contents + 페이지별 class 삽입 -->
-                    <h2 class="tit"><span class="underline">인증번호를 입력</span>해주세요 </h2>
+                    <h2 class="tit"><span class="underline">인증번호를 입력해주세요</span></h2> <!--//2020-06-05 강조 범위 수정-->
+                   
                     <div class="passWrap">
-                        <div class="pass-input">
-                            <input class="certi-input first" name="certi-input" type="tell" size="1" maxlength="1" placeholder="&#9679;" autofocus="autofocus">
-                            <input class="certi-input" name="certi-input" type="tell" size="1" maxlength="1" placeholder="&#9679;">
-                            <input class="certi-input" name="certi-input" type="tell" size="1" maxlength="1" placeholder="&#9679;">
-                            <input class="certi-input" name="certi-input" type="tell" size="1" maxlength="1" placeholder="&#9679;">
-                            <input class="certi-input" name="certi-input" type="tell" size="1" maxlength="1" placeholder="&#9679;">
-                            <input class="certi-input" name="certi-input" type="tell" size="1" maxlength="1" placeholder="&#9679;">
+                        <!--2020-05-27 마크업수정-->
+                        <div class="pass-input-match password">
+                            <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                            <div class="pass-input">
+                                <span class="dot on">1</span> <!--활성화 class 'on'-->
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
                         </div>
+                        <!--//2020-05-27 마크업수정-->
+                        
                         <div class="time">02:59</div>
                         <em class="error-txt certi">인증번호가 일치하지 않습니다. <br>다시 입력해주세요.</em>
                     </div>
                     <p class="resend-tip">
+                        <button class="btnOpenBot" type="button">인증번호재전송</button> <!-- //2020-06-04 버튼 추가 -->
                         <button class="btnOpenBot" type="button" onclick="opBotSheet('layerBottom01')">인증번호 미수신 시 조치방법</button>
                     </p>
                 </div>
@@ -84,7 +93,7 @@
            </div>
 
            <div class="btn-group">
-               <button class="btn medium yellow" type="button" ><span>확인</span></button>
+               <button class="btn medium yellow" type="button" onclick="closeBotSheet('layerBottom01')"><span>확인</span></button>
            </div>
        </div>
    </div>

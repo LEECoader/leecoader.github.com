@@ -3,6 +3,9 @@
 작업자              날짜                   내용
 -------------------------------------------------------------------
 이진규             2020-05-22          최초작성
+이진규             2020-05-28          타이틀 수정
+이진규             2020-05-29          사이트 링크 영역 수정
+이진규             2020-06-05          상단 에러문구 수정
 
 
 -->
@@ -30,8 +33,13 @@
                 
                 <div class="contents kbp_webp_050">
                     
-                    <h2 class="tit">입력하신 주민번호와 성명이<br><span class="underline">일치하지 않습니다</span></h2>
-                    
+
+                    <!-- 06-05 상단 문구 수정 -->
+                    <!-- <h2 class="tit">입력하신 <span class="underline">주민번호와 성명이<br>일치하지 않습니다</span></h2> --> <!-- // 05-28 타이틀 수정 -->
+                    <p class="txt">입력하신 주민번호와 성명이<br>일치하지 않습니다.</p>
+                    <!-- // 06-05 상단 문구 수정 -->
+
+
                     <div class="bottom-fixed-contents">
                         <dl class="list-dot">
                             <dt>주민번호와 성명을 바르게 입력하였는데 본 에러메세지가 뜨는 경우는 다음과 같습니다.</dt>
@@ -40,18 +48,26 @@
                             <dt>실명확인방법</dt>
                             <dd>서울신용평가정보(주) SIREN24로 문의하시면 정보수정이 진행됩니다.</dd>
                         </dl>
-                        <a href="#" class="btn-link">SIREN24 실명확인 바로가기</a>
+                        
+                        <!-- 05-29 사이트 링크 영역 수정 -->
+                        <p class="resend-tip">
+                            <a href="http://www.siren24.com/servlet/sCi_realname3" target="_blank">SIREN24 실명확인 바로가기</a>
+                        </p>
+                        <!-- // 05-29 사이트 링크 영역 수정 -->
+
                     </div>
 
                 </div>
 
+                <div class="bottom-btn-area">
+                    <div class="btn-group">
+                        <button class="btn large yellow" type="button"><span>확인</span></button>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="bottom-btn-area">
-                <div class="btn-group">
-                    <button class="btn medium yellow" type="button"><span>확인</span></button>
-                </div>
-            </div>
+            
 
         </div>
     </div>

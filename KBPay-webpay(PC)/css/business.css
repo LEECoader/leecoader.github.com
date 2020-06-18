@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+.kbp_payc_017 .card-box.pay {margin-bottom: 16px;}
+.kbp_payc_017 .msg {margin-top: 25px;}
+.kbp_payc_017 .msg02 {margin-top: 16px;}
+.kbp_payc_017 .form-wrap {margin-top: 20px;}
+.kbp_payc_017 .form-text-list li .cell {width: 45%;}
+.kbp_payc_017 .form-text-list li .cell + .cell {width: 55%; vertical-align: middle;}
+.kbp_payc_017 .form-text-list li .cell .f-chk {color: #666;}
+
+.kbp_payc_022 .card-box.pay {margin-bottom: 16px;}
+.kbp_payc_022 .msg {margin-top: 32px;}
+.kbp_payc_022 .pointry-use {display: table; margin: 65px auto 0; font-size: 16px; line-height: 24px; letter-spacing: -0.4px;}
+.kbp_payc_022 .pointry-use > * {display: table-cell;}
+.kbp_payc_022 .pointry-use dt {color: #666;}
+.kbp_payc_022 .pointry-use dd {color: #222; font-weight: 500;}
+
+.kbp_payc_023 .card-box.pay {margin-bottom: 16px;}
+.kbp_payc_023 .msg {margin-top: 32px;}
+
+.kbp_payc_024 .card-box.pay {margin-bottom: 16px;}
+.kbp_payc_024 .msg {margin-top: 32px;}
+.kbp_payc_024 .msg02 {margin-top: 16px;}
+
+.kbp_payc_025 .card-box.pay {margin-bottom: 16px;}
+.kbp_payc_025 .msg {margin-top: 32px;}
+.kbp_payc_025 .msg02 {margin-top: 16px;}
+
+@media only screen and (max-width: 320px) {
+    .kbp_payc_017 .msg,
+    .kbp_payc_024 .msg,
+    .kbp_payc_025 .msg {font-size: 18px;}
+    .kbp_payc_024 .msg02,
+    .kbp_payc_025 .msg02 {font-size: 12px;}
+}
+
+.kbp_webp_060 .agree-terms {margin-top: 3px;}
+
+.kbp_webp_065 .agree-terms {margin-top: 16px;}

@@ -3,8 +3,9 @@
 작업자              날짜                   내용
 -------------------------------------------------------------------
 김수영             2020-05-21          최초작성
-
-
+김수영             2020-05-27          통신사선택+전화번호 입력 수정, 통신사선택 팝업 하단 버튼 삭제, 주민등록번호 마크업 수정
+김수영             2020-06-02          전화번호 > 휴대폰번호로 수정, validation 문구 적용
+김수영             2020-06-05           h2 강조 범위 수정
 -->
 <!DOCTYPE html>
 <html lang="ko">
@@ -29,63 +30,65 @@
                 <div class="contents kbp_webp_012"> <!-- contents + 페이지별 class 삽입 -->
 
                     <!--이름 입력 타이틀-->
-                    <h2 class="tit"><span class="underline">이름을 입력</span>해주세요 </h2>
+                    <h2 class="tit"><span class="underline">이름을 입력해주세요 </span></h2> <!--//2020-06-05 강조 범위 수정-->
 
                     <!--주민등록번호 입력 타이틀 : 이름 입력 후 노출
-                    <h2 class="tit"><span class="underline">주민등록번호를 입력</span>해주세요 </h2> -->
-
+                    <h2 class="tit"><span class="underline">주민등록번호를 입력해주세요</span> </h2> --> <!--//2020-06-05 강조 범위 수정-->
+ 
                     <!--휴대폰번호 입력 타이틀 : 이름 + 전화번호 입력 후 노출
-                    <h2 class="tit"><span class="underline">휴대폰번호를 입력</span>해주세요 </h2> -->
+                    <h2 class="tit"><span class="underline">휴대폰번호를 입력해주세요</span> </h2> --> <!--//2020-06-05 강조 범위 수정-->
                     
                    <!--form 입력 목록-->
                     <div class="form-wrap">
+                        
                         <ul class="form-text-list">
-                            <!--전화번호 입력-->
+                            <!--2020-05-27 수정-->
+                            <!--통신사 선택-->
                             <li>
-                                <!--통신사 선택-->
-                                <div class="ph-cell">
-                                    <div class="form_text ph" onclick="opBotSheet('layerBottom01')"> <!--활성화 class : on 추가, 입력 후 포커스 아웃일때 class : on, out 추가-->
-                                        <label for="ph-co">통신사</label>
-                                        <input type="text" id="ph-co" class="text" value="">
-                                    </div>
+                                <div class="form_text ph" onclick="opBotSheet('layerBottom01', this)">  <!-- 오류 class :  'error' 추가 --> 
+                                    <label for="ph-co">통신사</label>
+                                    <input type="text" id="ph-co" class="text" value="">
                                 </div>
-                                <!--전화번호 번호 입력-->
-                                <div class="ph-cell">
-                                    <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
-                                        <label for="ph">전화번호</label>
-                                        <input type="number" id="ph" class="text" value="">
-                                        <button class="btn-delete" type="button">삭제</button>
-                                    </div>
-                                    <em class="error-txt">error text</em>
+                                <em class="error-txt">통신사를 선택해주세요</em> <!--//2020-06-02 validation 문구 적용-->
+                            </li>
+                            <!--전화번호 번호 입력-->
+                            <li>
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
+                                    <label for="ph">휴대폰번호</label> <!--//2020-06-02 전화번호 > 휴대폰번호로 수정-->
+                                    <input type="tel" id="ph" class="text" value=""> <!--//2020-05-27 type tel 로 수정-->
+                                    <button class="btn-delete" type="button">삭제</button>
                                 </div>
+                                <em class="error-txt">휴대폰번호를 정확히 입력해주세요</em> <!--//2020-06-02 validation 문구 적용-->
                             </li>
                             <!--주민등록번호 입력-->
                             <li>
-                                <div class="form_text match"> <!-- 오류 class :  'error' 추가 -->
+                                <div class="form_text"> <!-- 오류 class :  'error' 추가 --> 
                                     <label for="id-number">주민등록번호</label>
-                                    <div class="pass-input-match">
+                                     <div class="pass-input-match id-number">
+                                        <input type="text" class="text" id="id-number"> <!--//실제 입력 받는 칸 -->
                                         <div class="pass-input">
-                                            <input type="tell"  id="id-number" class="certi-input first text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
+                                            <span class="dot on">1</span> <!--활성화 class 'on'-->
+                                            <span class="dot"></span>
+                                            <span class="dot"></span>
+                                            <span class="dot"></span>
+                                            <span class="dot"></span>
+                                            <span class="dot"></span>
                                         </div>
-                                        <span class="dash"></span>
                                         <div class="pass-input">
-                                            <input type="tell" class="certi-input text" name="certi-input" size="1" maxlength="1" placeholder="&#9679;" value="">
-                                            <input type="tell" class="text black" placeholder="&#9679;" value="" readonly>
-                                            <input type="tell" class="text black" placeholder="&#9679;" value="" readonly>
-                                            <input type="tell" class="text black" placeholder="&#9679;" value="" readonly>
-                                            <input type="tell" class="text black" placeholder="&#9679;" value="" readonly>
-                                            <input type="tell" class="text black" placeholder="&#9679;" value="" readonly>
-                                            <input type="tell" class="text black" placeholder="&#9679;" value="" readonly>
+                                            <span class="dash">-</span> 
+                                            <span class="dot"></span>
+                                            <span class="dot black"></span>
+                                            <span class="dot black"></span>
+                                            <span class="dot black"></span>
+                                            <span class="dot black"></span>
+                                            <span class="dot black"></span>
+                                            <span class="dot black"></span>
                                         </div>
                                     </div>
                                 </div>
-                                <em class="error-txt">error text</em>
+                                <em class="error-txt">생년월일과 성별을 정확히 입력해주세요</em> <!--//2020-06-02 validation 문구 적용-->
                             </li>
+                            <!--//2020-05-27 수정-->
                             <!--이름 입력-->
                             <li>
                                 <div class="form_text"> <!-- 오류 class :  'error' 추가 -->
@@ -93,7 +96,7 @@
                                     <input type="text" id="name" name="" class="text" value="">
                                     <button class="btn-delete" type="button">삭제</button>
                                 </div>
-                                <em class="error-txt">error text</em>
+                                <em class="error-txt">이름을 정확히 입력해주세요</em> <!--//2020-06-02 validation 문구 적용-->
                             </li>
                         </ul>
                     </div>
@@ -111,7 +114,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- 통신사 선택 : bottom sheet layer -->
     <div class="l-dim"></div>
@@ -133,9 +135,10 @@
                 </ul>
                 <!-- //컨텐츠영역 -->
             </div>
+            <!--2020-05-27 삭제
             <div class="btn-group">
                 <button class="btn medium yellow" type="button" ><span>확인</span></button>
-            </div>
+            </div>-->
         </div>
     </div>
     <!-- //통신사 선택 : bottom sheet layer -->

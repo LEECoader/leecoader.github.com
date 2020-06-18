@@ -3,7 +3,7 @@
 작업자              날짜                   내용
 -------------------------------------------------------------------
 유현우             2020-05-22          최초작성
-
+김수영             2020-06-05          카드아이콘 추가
 
 -->
 <!DOCTYPE html>
@@ -33,9 +33,10 @@
 
                     <div class="cd-change">
                         <p class="cd-name txt04 align-c">
-                            <span class="lb-type black">교통</span>
-                            펭수 노리 체크카드(펭카)
-                        </p>
+                            <!--2020-06-05 카드 아이콘 추가-->
+                            <img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">
+                            <!--//2020-06-05 카드 아이콘 추가-->
+                            펭수 노리 체크카드(펭카)</p>
                         <!-- <p class="cd-num txt03 align-c">1234-56**-****-1234</p> -->
 
                         <!-- CARD Swipe -->
@@ -45,25 +46,25 @@
                                     <button type="button" class="add-card">카드추가</button>
                                 </div>
                                 <div>
-                                    <img src="./images/etc/sample_card168x104_02.png">
+                                    <img src="./images/etc/sample_card168x104_02.png" alt="">
                                 </div>
                                 <div>
-                                    <img src="./images/etc/sample_card168x104_01.png">
+                                    <img src="./images/etc/sample_card168x104_01.png" alt="">
                                 </div>
                                 <div>
-                                    <img src="./images/etc/sample_card168x104_03.png">
+                                    <img src="./images/etc/sample_card168x104_03.png" alt="">
                                 </div>
                             </div>
                         </div>
                         <!-- CARD Swipe -->
 
-                        <div class="link01 underline-link align-r">
+                        <div class="link01 resend-tip">
                             <a href="#">결제수단관리</a>
                         </div>
 
                         <p class="msg-box txt05 align-c">
-                            스마트스토어<br>
-                            5,000,000원<br>
+                            <span>스마트스토어</span> 
+                            <span>5,000,000원</span><br>
                             결재하시겠습니까?
                         </p>
                     </div>
@@ -73,10 +74,11 @@
                         <ul class="form-text-list">
                             <!--할부-->
                             <li>
-                                <div class="form_text ph" onclick="opBotSheet('layerBottom01')">
-                                    <label for="ph-co">일시불</label>
+                                <div class="form_text ph" onclick="opBotSheet('layerBottom01', this)">  <!-- 오류 class :  'error' 추가 --> 
+                                    <label for="ph-co">할부</label>
                                     <input type="text" id="ph-co" class="text" value="">
                                 </div>
+                                <em class="error-txt">error text</em>
                             </li>
                             <!--결제금액 입력-->
                             <li>
@@ -144,9 +146,6 @@
                 </ul>
                 <!-- //컨텐츠영역 -->
             </div>
-            <div class="btn-group">
-                <button class="btn medium yellow" type="button" ><span>확인</span></button>
-            </div>
         </div>
     </div>
 
@@ -179,7 +178,6 @@
             $('.card-slider').slick('slickGoTo', 1);
 
             $('.card-slider').on("afterChange", function(e, slick, currentSlide) {
-                console.log(currentSlide);
                 if (currentSlide > 0) {
                     // 카드 상단에 v 아이콘
                     $('.card-slider .slick-slide').removeClass("current");

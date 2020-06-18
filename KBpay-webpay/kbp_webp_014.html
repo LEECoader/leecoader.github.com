@@ -3,7 +3,7 @@
 작업자              날짜                   내용
 -------------------------------------------------------------------
 김수영             2020-05-22          최초작성
-
+김수영             2020-05-27          카드박스 수정(카드타입 위치이동), 비밀번호 필드 수정(2자리/4자리 입력 케이스 추가, 마크업 수정)
 
 -->
 <!DOCTYPE html>
@@ -27,42 +27,57 @@
             <div class="contents-wrap">
                 <!--contents-->
                 <div class="contents kbp_webp_014"> <!-- contents + 페이지별 class 삽입 -->
-                    <div class="card-box line certi">
+                    <!--2020-05-27 수정-->
+                    <div class="card-box certi">
                         <p class="img-area">
-                            <img class="card-img" src="./images/etc/sample_card02.png" alt="카카오페이 체크카드">
-                            <img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">
+                            <span class="img">
+                                <img src="./images/etc/sample_card01.png" alt="Liiv M 체크카드">
+                            </span>
                         </p>
                         <p class="txt-area">
-                            <span class="card-tit"><em class="card-type">[체크]</em>
-                                <!---타입별 case : <em class="card-type02">[모바일]</em> <em class="card-type03">[신속발급]</em>-->
-                                카카오페이 체크카드
-                            </span>
+                            <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">Liiv M 체크카드 체크카드 체크카드 체크카드</span>
+                            <span class="card-type">신용</span>
                             <span class="card-num">9445 - 20** - **** - 4759</span>
                         </p>
-                        <a href="#" class="btn-more">카드선택</a>
+                        <a href="#" class="btn-list">더보기</a>
                     </div>
-                    <p class="txt02e align-c">카드 비밀번호 앞 2자리 입력</p>
                     
+                    <p class="txt02 align-c">카드 비밀번호 4자리 입력</p> <!--//비밀번호 4자리 받을 때-->
+                    <p class="txt02 align-c" style="display:none">카드 비밀번호 앞 2자리 입력</p> <!--//비밀번호 2자리 받을 때-->
+
                     <div class="passWrap card-pass">
-                        <!--비밀번호 실제 입력 칸-->
-                        <div class="pass-input pass">
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
-                            <input class="certi-input" name="certi-input" type="password" size="1" maxlength="1"> <!-- value 값 들어오면 노란색으로 변경됩니다. -->
-                            <input class="certi-input black" name="certi-input" type="password" value="" readonly>
-                            <input class="certi-input black" name="certi-input" type="password" value="" readonly>
+                        <!--비밀번호 4자리 받을 때-->
+                        <div class="pass-input-match password">
+                            <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                            <div class="pass-input">
+                                <span class="dot yellow on">1</span> <!--활성화 class 'on'-->
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot yellow"></span>
+                            </div>
                         </div>
-                        <!--//비밀번호 실제 입력 칸-->
-                        <div class="pass-bg">
-                            <input class="certi-input" type="password" value="1">
-                            <input class="certi-input" type="password" value="1">
-                            <input class="certi-input black" type="password" value="1">
-                            <input class="certi-input black" type="password" value="1">
+                        <!--//비밀번호 4자리 받을 때-->
+
+                        <!--비밀번호 2자리 받을 때-->
+                        <div class="pass-input-match password" style="display:none">
+                            <input type="text" class="text"> <!--//실제 입력 받는 칸 -->
+                            <div class="pass-input">
+                                <span class="dot yellow"></span> <!--활성화 class 'on'-->
+                                <span class="dot yellow"></span>
+                                <span class="dot black"></span> <!--마킹 활성화 class 'black'-->
+                                <span class="dot black"></span>
+                            </div>
                         </div>
+                        <!--//비밀번호 4자리 받을 때-->
+
+                        <!--//2020-05-27 마크업수정-->
 
                         <!--error text-->
                         <em class="error-txt certi">카드비밀번호 오류 횟수(3회)를 초과하여 이용이 제한되었습니다.<br>잠김해제 후 이용바랍니다.</em> <!--케이스별 에러문구-->
+                        <!--em class="error-txt certi">카드비밀번호가 일치하지 않습니다.</em-->
                         <!--//error text--> 
                     </div>
+
 
                     <!--tooltip-->
                     <div class="tool-tip">
@@ -76,16 +91,6 @@
 
                 </div>
                 <!--//contents-->
-
-                <!-- Bottom button area -->
-                <div class="bottom-btn-area">
-                    <div class="btn-group">
-                        <button class="btn large yellow" type="button" disabled> <!-- 활성화 > disabled 삭제-->
-                                <span>다음</span>
-                        </button>
-                    </div>
-                </div>
-                <!-- //Bottom button area -->
 
             </div>
         </div>

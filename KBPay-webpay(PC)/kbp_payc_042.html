@@ -1,0 +1,119 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-06-16          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>은행계좌선택</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="./js/html5.js"></script>
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>은행계좌 등록</h1>
+
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_042"> <!-- 화면ID -->
+                <!-- 본문 -->
+
+                <!-- 계좌 없는 경우 -->
+                <!-- <div class="card-none">
+                    <p class="msg">보유중인 계좌가 없습니다.</p>
+                    <button type="button" class="btn-line"><span>직접등록</span></button>
+                </div> -->
+                <!-- // 계좌 없는 경우 -->
+
+
+                <!-- 계좌 있는 경우 -->
+                <p class="txt">통장이미지를 클릭하시면, 결제수단으로 등록/해제를 할 수 있습니다.<br>보유 계좌가 없을 경우에는 은행계좌 직접등록을 이용해 주세요.</p>
+
+                <ul class="list-card-box">
+                    <li>
+                        <div class="card-box">
+                            <a href="#" class="img-area active"> <!-- class="active" 추가시 선택됨 -->
+                                <span class="img">
+                                    <img src="./images/etc/card_account.png" alt="국민 직장인 우대 통장">
+                                </span>
+                            </a>
+                            <p class="txt-area">
+                                <span class="card-tit">국민 직장인 우대 통장</span>
+                                <span class="card-num">12345678****90</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-box">
+                            <a href="#" class="img-area"> <!-- class="active" 추가시 선택됨 -->
+                                <span class="img">
+                                    <img src="./images/etc/card_account.png" alt="국민 직장인 우대 통장">
+                                </span>
+                            </a>
+                            <p class="txt-area">
+                                <span class="card-tit">국민 직장인 우대 통장</span>
+                                <span class="card-num">12345678****90</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-box">
+                            <a href="#" class="img-area"> <!-- class="active" 추가시 선택됨 -->
+                                <span class="img">
+                                    <img src="./images/etc/card_account.png" alt="국민 직장인 우대 통장">
+                                </span>
+                            </a>
+                            <p class="txt-area">
+                                <span class="card-tit">국민 직장인 우대 통장</span>
+                                <span class="card-num">12345678****90</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <!-- // 계좌 있는 경우 -->
+
+                <!-- //본문 -->                
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <!-- 카드 없는 경우 -->
+                <!-- <div class="btn-group">
+                    <button type="button" class="btn-type type01"><span>확인</span></button>
+                </div> -->
+                <!-- // 카드 없는 경우 -->
+
+                <!-- 카드 있는 경우 -->
+                <div class="btn-group">
+                    <button type="button" class="btn-line"><span>직접등록</span></button>
+                    <button type="button" class="btn-type type01"><span>선택 결제수단 등록</span></button>
+                </div>
+                <!-- // 카드 있는 경우 -->
+            </div>
+            <!-- //Bottom area -->
+
+            
+        </div>
+    </div>
+
+</body>
+</html>

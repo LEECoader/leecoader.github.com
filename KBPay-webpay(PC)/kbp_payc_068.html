@@ -1,0 +1,152 @@
+<!--
+-------------------------------------------------------------------
+작업자              날짜                   내용
+-------------------------------------------------------------------
+이진규             2020-06-16          최초작성
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신용/체크카드 관리</title>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="./js/html5.js"></script>
+    <![endif]-->
+    <!-- util -->
+    
+    <!-- // util -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>신용/체크카드 관리</h1>
+
+                <button type="button" class="close">닫기</button>
+            </div>
+            <!-- //Header -->
+            <div class="contents kbp_payc_068"> <!-- 화면ID -->
+                <!-- 본문 -->
+
+                <p class="txt">삭제 버튼을 클릭하시면, 카드가 해제됩니다.</p>
+
+                <ul class="list-card-box edit">
+                    <li>
+                        <div class="card-box">
+                            <div class="img-area">
+                                <span class="img">
+                                    <img src="./images/etc/sample_card01.png" alt="Liiv M 체크카드">
+                                </span>
+                            </div>
+                            <p class="txt-area">
+                                <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_visa.png" alt="VISA">Liiv M 체크카드 Liiv M 체크카드 Liiv M 체크카드 Liiv M 체크카드</span>
+                                <span class="card-type">신용</span>
+                                <span class="card-num">9445 - 20** - **** - 4759</span>
+                                <button type="button" class="del"><span>삭제</span></button>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-box">
+                            <div class="img-area">
+                                <span class="img">
+                                    <img src="./images/etc/sample_card02.png" alt="카카오페이 체크카드">
+                                </span>
+                            </div>
+                            <p class="txt-area">
+                                <span class="card-tit"><img class="card-icon" src="images/icon/ico_card_master.png" alt="MASTER">카카오페이 체크카드</span>
+                                <span class="card-type">체크</span>
+                                <span class="card-num">9445 - 20** - **** - 4759</span>
+                                <button type="button" class="del"><span>삭제</span></button>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-box">
+                            <div class="img-area">
+                                <span class="img">
+                                    <img src="./images/etc/sample_card03.png" alt="펭수 노리 체크카드">
+                                </span>
+                            </div>
+                            <p class="txt-area">
+                                <span class="card-tit"><img class="card-icon" src="images/icon/ico_card_master.png" alt="MASTER">펭수 노리 체크카드</span>
+                                <span class="card-type">기업개별</span>
+                                <span class="card-num">9445 - 20** - **** - 4759</span>
+                                <button type="button" class="del"><span>삭제</span></button>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-box">
+                            <div class="img-area">
+                                <span class="img">
+                                    <img src="./images/etc/sample_card04.png" alt="톡톡 pay 카드">
+                                </span>
+                            </div>
+                            <p class="txt-area">
+                                <span class="card-tit"><img class="card-icon" src="images/icon/ico_card_master.png" alt="MASTER">톡톡 pay 카드</span>
+                                <span class="card-type">기업개별</span>
+                                <span class="card-num">9445 - 20** - **** - 4759</span>
+                                <button type="button" class="del"><span>삭제</span></button>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-box">
+                            <div class="img-area">
+                                <span class="img">
+                                    <img src="./images/etc/sample_card05.png" alt="Liiv Mate 체크카드">
+                                </span>
+                            </div>
+                            <p class="txt-area">
+                                <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">Liiv Mate 체크카드</span>
+                                <span class="card-type">체크</span>
+                                <span class="card-num">9445 - 20** - **** - 4759</span>
+                                <button type="button" class="del"><span>삭제</span></button>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-box">
+                            <div class="img-area">
+                                <span class="img">
+                                    <img src="./images/etc/sample_card06.png" alt="H.Point 체크카드">
+                                </span>
+                            </div>
+                            <p class="txt-area">
+                                <span class="card-tit"><img class="card-icon" src="./images/icon/ico_card_master.png" alt="MASTER">H.Point 체크카드</span>
+                                <span class="card-type">체크</span>
+                                <span class="card-num">9445 - 20** - **** - 4759</span>
+                                <button type="button" class="del"><span>삭제</span></button>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- //본문 -->                
+            </div>
+
+            <!-- Bottom area -->
+            <div class="bottom-group">
+                <div class="btn-group">
+                    <button type="button" class="btn-line"><span>신용/체크카드 추가</span></button>
+                    <button type="button" class="btn-type type01"><span>확인</span></button>
+                </div>
+            </div>
+            <!-- //Bottom area -->
+
+            
+        </div>
+    </div>
+
+</body>
+</html>
